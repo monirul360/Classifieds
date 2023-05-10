@@ -11,6 +11,7 @@ ul {
   padding-left: 0px;
   margin-bottom: 0px;
   margin-top: 0px;
+  list-style: none;
 }
 
 p {
@@ -440,6 +441,154 @@ select {
   width: 80%;
   display: block;
   margin: 15px auto;
+}
+
+.footerWrap {
+  background: #ddd url("./Img/ft-buildings.png") repeat-x top;
+  padding: 170px 0 50px 0;
+}
+
+.footerWrap .ft-logo {
+  margin-bottom: 15px;
+  color: #9c00ff;
+}
+
+.footerWrap h5 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.footerWrap p {
+  line-height: 22px;
+  color: #333;
+}
+
+.footerWrap .ft-logo {
+  margin-bottom: 15px;
+}
+
+.social {
+  margin-top: 20px;
+}
+
+.social a {
+  color: #666;
+  font-size: 36px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.social a:hover {
+  color: #9c00ff;
+}
+
+.sidebar .social a {
+  color: #444;
+}
+
+.footerWrap .quicklinks {
+  list-style: none;
+}
+
+.footerWrap .quicklinks li {}
+
+.footerWrap .quicklinks li a {
+  display: block;
+  color: #333;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.footerWrap .quicklinks li a:before {
+  content: '\f0da';
+  font-family: 'FontAwesome';
+  margin-right: 7px;
+}
+
+.footerWrap .quicklinks li a:hover {
+  color: #9c00ff;
+  text-decoration: none;
+}
+
+.footerWrap .address {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+  position: relative;
+  padding-left: 35px;
+  line-height: 20px;
+}
+
+.footerWrap .address:before {
+  content: "\f277";
+  font-family: 'FontAwesome';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 18px;
+}
+
+.footerWrap .email {
+  position: relative;
+  padding-left: 35px;
+  margin-top: 15px;
+  color: #333;
+}
+
+.footerWrap .email:before {
+  content: "\f0e0";
+  font-family: 'FontAwesome';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 18px;
+}
+
+.footerWrap .phone a,
+.footerWrap .email a {
+  color: #333;
+  font-weight: 600;
+}
+
+.footerWrap .phone {
+  position: relative;
+  padding-left: 35px;
+  margin-top: 25px;
+  color: #333;
+  font-size: 24px;
+}
+
+.footerWrap .phone:before {
+  content: "\f095";
+  font-family: 'FontAwesome';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 30px;
+  color: #333;
+}
+
+.copyright {
+  padding: 20px 0;
+  text-align: center;
+  color: #777;
+}
+
+.copyright ul li {
+  display: inline;
+}
+
+.copyright ul li a {
+  color: #555;
+  padding: 0 5px;
+  display: inline-block;
+  margin: 5px;
+}
+
+.copyright a:hover {
+  color: #000;
 }
 
 @media (max-width:1000px) {
