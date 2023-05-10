@@ -209,11 +209,13 @@ select {
   text-align: center;
 }
 
-.catewrap .titleTop {
+/* common style */
+.titleTop {
   position: relative;
+  text-align: center;
 }
 
-.catewrap .titleTop .tips-border {
+.tips-border {
   width: 100px;
   margin: 20px auto;
   text-align: center;
@@ -221,21 +223,22 @@ select {
   background-color: #9801c0;
 }
 
-.catewrap .titleTop h1 {
+.titleTop h1 {
   font-weight: bold;
 }
 
-.catewrap .titleTop h1 span {
+.titleTop h1 span {
   color: #9801c0;
 }
 
-.catewrap .titleTop p {
+.titleTop p {
   max-width: 700px;
   margin: 0 auto;
   line-height: 22px;
   margin-bottom: 45px;
 }
 
+/* common style */
 .catewrap .row a {
   color: black;
 }
@@ -247,6 +250,196 @@ select {
   margin-top: 15px;
   padding: 8px 5px;
   border-bottom: 2px solid #ddd;
+}
+
+.latest-ads {
+  padding: 50px 0px;
+  background-color: #F6F6F6;
+}
+
+.latest-ads .titleTop h1 {}
+
+.latest-ads ul {
+  list-style: none;
+}
+
+.latest-ads img {
+  width: 100%;
+  margin: 14px 0px;
+}
+
+.latest-ads .viewallbtn a {
+  width: fit-content;
+  display: block;
+  margin: 18px auto;
+  background: #9c00ff;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 30px;
+}
+
+.howitwrap {
+  padding: 40px 0px;
+  background-color: white;
+}
+
+.howitwrap ul {
+  list-style: none;
+}
+
+.howlist li {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.howlist li .iconcircle {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 115px;
+  margin-bottom: 15px;
+  display: inline-block;
+  background: #9c00ff;
+}
+
+.howlist li .iconcircle i {
+  font-size: 48px;
+  color: #fff;
+}
+
+.testimonial {
+  background-color: #F6F6F6;
+  padding: 40px 0px;
+}
+
+.carousel {
+  width: 80%;
+  margin: 10px auto;
+  background: #fff;
+  border: 1px solid #9801c0;
+  padding: 30px 20px;
+  margin-bottom: 20px;
+}
+
+.carousel-item img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: auto;
+  border: 1px solid #9c00ff;
+}
+
+.carousel-item .clientname {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 10px 0;
+  color: #333;
+}
+
+.carousel-item .clientinfo {
+  font-size: 14px;
+  font-weight: 600;
+  color: #9c00ff;
+  margin-bottom: 10px;
+}
+
+.carousel-item .clientdescription {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 22px;
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+.appwraper {
+  background: url("./Img/app-bg.jpg") no-repeat top;
+  background-size: cover;
+  padding: 70px 0;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.appwraper h1 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #000;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.appwraper .subtitle2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.appwraper p {
+  color: #fff;
+  line-height: 24px;
+  max-width: 770px;
+  margin: auto;
+
+}
+
+.appwraper .appbtn {
+  margin-top: 20px;
+}
+
+.appwraper .appbtn a {
+  display: inline-block;
+  border: 1px solid #fff;
+  padding: 15px 30px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 10px 10px;
+}
+
+.appwraper .appbtn a:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.appwraper .appbtn a i {
+  margin-right: 12px;
+}
+
+.Cities-ads {
+  padding: 40px 0px;
+  background-color: #F6F6F6;
+}
+
+.Cities-ads ul {
+  list-style: none;
+}
+
+.Cities-ads .catelist li a {
+  display: block;
+  margin: 10px 0;
+  position: relative;
+  color: #000;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.Cities-ads .catelist li span {
+  color: #666;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.Cities-ads .catelist li a:hover {
+  color: #9c00ff;
+}
+
+.Cities-ads .wideBanner img {
+  width: 80%;
+  display: block;
+  margin: 15px auto;
 }
 
 @media (max-width:1000px) {
@@ -321,6 +514,15 @@ select {
     font-size: 33px;
     margin-bottom: 15px;
     color: #fff;
+  }
+
+  .carousel {
+    width: 100%;
+    margin: 10px auto;
+    background: #fff;
+    border: 1px solid #9801c0;
+    padding: 30px 20px;
+    margin-bottom: 20px;
   }
 }
 
