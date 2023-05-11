@@ -69,7 +69,9 @@ const Footer = () => {
             <div class="copyright">
                 <div class="container">
                     <div class="bttxt">Copyright © 2017 World's
-                        . All Rights Reserved. Design by: <a href="#" target="_blank">Monirul360</a></div>
+                        . All Rights Reserved. Design by:
+                        <a href="#" target="_blank">Monirul360</a>
+                    </div>
                 </div>
             </div>
         </div>

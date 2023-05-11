@@ -258,21 +258,62 @@ select {
   background-color: #F6F6F6;
 }
 
-.latest-ads .titleTop h1 {}
+
+
+.gridlist li .adimg img {
+  display: block;
+  width: 100%;
+}
+
+.gridlist li {
+  margin: 14px auto;
+}
+
+.gridlist li .info {
+  background: #fff;
+  padding: 20px;
+  min-height: 165px;
+}
+
+.gridlist li h3 {
+  margin: 0;
+}
+
+.gridlist li h3 a {
+  display: block;
+  font-size: 18px;
+  color: #333;
+}
+
+.gridlist li h3 a:hover {
+  color: #666;
+}
+
+.gridlist li .location {
+  padding: 10px 0;
+  color: #777;
+  line-height: 30px;
+}
+
+.gridlist li .location i {
+  color: #9c00ff;
+}
+
+.gridlist li .price {
+  font-size: 24px;
+  color: #9c00ff;
+  font-weight: 700;
+}
 
 .latest-ads ul {
   list-style: none;
 }
 
-.latest-ads img {
-  width: 100%;
-  margin: 14px 0px;
-}
 
 .latest-ads .viewallbtn a {
   width: fit-content;
   display: block;
-  margin: 18px auto;
+  margin: 20px auto;
   background: #9c00ff;
   color: #fff;
   font-size: 18px;
@@ -437,7 +478,7 @@ select {
   color: #9c00ff;
 }
 
-.Cities-ads .wideBanner img {
+.wideBanner img {
   width: 80%;
   display: block;
   margin: 15px auto;
@@ -469,22 +510,22 @@ select {
   margin-bottom: 15px;
 }
 
-.social {
+.footerWrap .social {
   margin-top: 20px;
 }
 
-.social a {
+.footerWrap .social a {
   color: #666;
   font-size: 36px;
   display: inline-block;
   margin-right: 5px;
 }
 
-.social a:hover {
+.footerWrap .social a:hover {
   color: #9c00ff;
 }
 
-.sidebar .social a {
+.footerWrap .sidebar .social a {
   color: #444;
 }
 
@@ -580,8 +621,8 @@ select {
   display: inline;
 }
 
-.copyright ul li a {
-  color: #555;
+.copyright a {
+  color: #9801c0;
   padding: 0 5px;
   display: inline-block;
   margin: 5px;
