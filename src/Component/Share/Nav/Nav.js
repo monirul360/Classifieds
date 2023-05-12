@@ -6,9 +6,6 @@ const Nav = () => {
             <div className="top-bar">
                 <div className="container">
                     <div className="d-flex">
-                        <div className="menu">
-                            <a href="">Terms & Conditions</a>
-                        </div>
                         <div className="top-social">
                             <ul>
                                 <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -31,6 +28,9 @@ const Nav = () => {
                                 </svg></a></li>
                             </ul>
                         </div>
+                        <div className="post">
+                            <a href="">Post now</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@ const Nav = () => {
                 <div className="container">
                     <div className="flex">
                         <div className="logo">
-                            <h2>World's</h2>
+                            <h2><a href="">World's</a></h2>
                         </div>
                         <div className="menu">
                             <ul>
@@ -57,9 +57,12 @@ const Nav = () => {
                                 <div></div>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">HOME</a></li>
+                                <li><a class="dropdown-item" href="#">ABOUT US</a></li>
+                                <li><a class="dropdown-item" href="#">PAGES</a></li>
+                                <li><a class="dropdown-item" href="#">BLOG</a></li>
+                                <li><a class="dropdown-item" href="#">CONTACT</a></li>
+                                <li><a class="dropdown-item" href="#">REGISTER</a></li>
                             </ul>
                         </div>
                     </div>
