@@ -1,7 +1,14 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
-
+import auth from '../../../Firebase';
+import userimg from './../../../Icon/user.png'
+import { signOut } from 'firebase/auth';
 const Nav = () => {
+    const [user, loading, error] = useAuthState(auth);
+    const singout = () => {
+        signOut(auth);
+    }
     return (
         <div>
             <div className="top-bar">
@@ -48,7 +55,17 @@ const Nav = () => {
                                 <li><Link to="/pages">PAGES</Link></li>
                                 <li><Link to="/blog">BLOG</Link></li>
                                 <li><Link to="/contact">CONTACT</Link></li>
-                                <li><Link id='register' to="/Register">REGISTER</Link></li>
+                                {user ? <>
+
+                                    <div className='nav-profile'>
+                                        <img onClick={() => singout()} src={userimg} alt="" />
+                                    </div>
+
+                                </>
+                                    : <>
+                                        <li><Link id='register' to="/Register">REGISTER</Link></li>
+                                    </>}
+
                             </ul>
                         </div>
                         <div class="dropdown">

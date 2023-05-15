@@ -97,6 +97,7 @@ nav .logo h2 a {
 nav .flex .menu ul {
   list-style: none;
   display: flex;
+  align-items: center;
 }
 
 nav .flex .menu ul li a {
@@ -119,6 +120,13 @@ nav .flex .menu #home {
 nav .flex .menu #register {
   background: #333;
   color: #fff;
+}
+
+.nav-profile img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-left: 10px;
 }
 
 .slider {
@@ -555,7 +563,7 @@ select {
   margin-bottom: 20px;
 }
 
-.register-card .socialLogin a {
+.register-card .socialLogin button {
   width: fit-content;
   display: block;
   margin: auto;
@@ -564,9 +572,10 @@ select {
   color: white;
   font-weight: bold;
   border-radius: 30px;
+  border: none;
 }
 
-.register-card .socialLogin a i {
+.register-card .socialLogin button i {
   background-color: #dd4b39;
   color: white;
   font-size: 20px;
