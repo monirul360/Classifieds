@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../../Firebase';
@@ -6,6 +6,7 @@ import userimg from './../../../Icon/user.png'
 import { signOut } from 'firebase/auth';
 const Nav = () => {
     const [user, loading, error] = useAuthState(auth);
+    const [shownav, setShownav] = useState(false);
     const singout = () => {
         signOut(auth);
     }
@@ -58,7 +59,8 @@ const Nav = () => {
                                 {user ? <>
 
                                     <div className='nav-profile'>
-                                        <img onClick={() => singout()} src={userimg} alt="" />
+                                        <img
+                                            onClick={() => setShownav(!shownav)} src={userimg} alt="" />
                                     </div>
 
                                 </>
@@ -83,10 +85,38 @@ const Nav = () => {
                                 <li><a class="dropdown-item" href="#">REGISTER</a></li>
                             </ul>
                         </div>
+                        {/* nav-profile-section */}
+                        {user ? <>
+                            <div className={`${shownav ? "nav_profile_section" : "nav_profile_section_hide"}`}>
+                                <div className="d-flex align-items-center border-bottom p-2">
+                                    <div>
+                                        <img src={userimg} alt="" />
+                                    </div>
+                                    <div className='ms-3'>
+                                        <h3>{user?.displayName}</h3>
+                                    </div>
+                                </div>
+                                <div className="nav_profile_nevigate py-3 ps-3">
+                                    <ul>
+                                        <li><Link to='/dashboard'>Videw Profile</Link></li>
+                                        <li><Link to='/dashboard'>Videw Profile</Link></li>
+                                        <li><Link to='/dashboard'>Videw Profile</Link></li>
+                                        <li><Link to='/dashboard'>Videw Profile</Link></li>
+                                        <li><Link to='/dashboard'>Videw Profile</Link></li>
+                                        <li><button onClick={() => singout()}>Log Out</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </> : <></>
+                        }
+                        {/* nav-profile-section  end*/}
                     </div>
                 </div>
-            </nav>
-        </div>
+            </nav >
+            <div className="continer">
+
+            </div>
+        </div >
     );
 };
 

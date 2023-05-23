@@ -3,8 +3,9 @@ import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import Tittle from '../../Component/Share/Tittle/Tittle';
 import auth from '../../Firebase';
-import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import SocialLogin from '../../Component/Share/SocialLogin/SocialLogin';
+import useToken from '../../hooks/useToker';
 const Register = () => {
     const { register, handleSubmit } = useForm();
 
@@ -22,8 +23,9 @@ const Register = () => {
         await createUserWithEmailAndPassword(email, password)
         await updateProfile({ displayName });
     };
+    const [token] = useToken(user)
     const navigate = useNavigate();
-    if (user) {
+    if (token) {
         navigate("/")
     }
     return (

@@ -14,7 +14,7 @@ import twelve from './../../Icon/12.png'
 const Catagory = () => {
     return (
         <div>
-            <div class="section catewrap">
+            <div data-aos="zoom-in" class="section catewrap">
                 <div class="container">
                     <div class="titleTop">
                         <h1>Browse <span>Categories</span></h1>

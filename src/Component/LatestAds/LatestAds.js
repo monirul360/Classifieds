@@ -8,7 +8,7 @@ const LatestAds = () => {
     return (
         <div>
             {/* latest ads post start */}
-            <div class="latest-ads">
+            <div data-aos="fade-right" class="latest-ads">
                 <div class="container">
                     {/* title start */}
                     <div class="titleTop">
