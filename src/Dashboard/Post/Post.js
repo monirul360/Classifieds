@@ -40,8 +40,8 @@ const Post = () => {
     return (
         <>
             <div>
-                <div className="post-form">
-                    <h2 style={{ color: "#9c00ff" }} className='my-2 mb-4'>Free Ads now</h2>
+                <div className="post-form p-4 bg-white">
+                    <h5 style={{ background: "#9801c0", color: "white", padding: "10px" }}>Free Ads Now</h5>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <input className='form-control py-3 my-2' type="text" name="" placeholder='Title' {...register("title")} required />
                         <textarea className='form-control py-3 my-2' name="" placeholder='Description' {...register("Description")} id="" required></textarea>

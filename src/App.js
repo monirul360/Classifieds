@@ -14,6 +14,9 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import About_user from './Dashboard/About_user/About_user';
 import { formatDistance, subDays } from 'date-fns'
+import UpdateProfile from './Dashboard/UpdateProfile/UpdateProfile';
+import Friend from './Dashboard/Friend/Friend';
+import Chat from './Dashboard/Chat/Chat';
 formatDistance(subDays(new Date(), 3), new Date(), { addSuffix: true })
 function App() {
   AOS.init();
@@ -32,6 +35,11 @@ function App() {
         >
           <Route index element={<Post></Post>} ></Route>
           <Route path='about_user' element={<About_user></About_user>}></Route>
+          <Route path='updateprofile' element={<UpdateProfile></UpdateProfile>}
+          >
+          </Route>
+          <Route path='friend' element={<Friend></Friend>}></Route>
+          <Route path='chat' element={<Chat></Chat>}></Route>
         </Route>
       </Routes>
       <Footer></Footer>

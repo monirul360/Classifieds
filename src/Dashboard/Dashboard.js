@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../Firebase';
 import userlogo from './../Icon/user.png';
@@ -6,6 +6,12 @@ import coverphoto from './../Img/Cover.jpg';
 import { Link, Outlet } from 'react-router-dom';
 const Dashboard = () => {
     const [user] = useAuthState(auth);
+    const [info, setinfo] = useState([]);
+    useEffect(() => {
+        fetch(`http://localhost:5000/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setinfo(data));
+    }, [user])
 
     return (
         <>
@@ -19,8 +25,8 @@ const Dashboard = () => {
                     </div>
                     <div className="profile-info">
                         <h2>{user?.displayName}</h2>
-                        <p>Web Design and Developer</p>
-                        <Link to="/"> <i className='fa fa fa-edit'></i> Update Profile</Link>
+                        <p>{info?.bio}</p>
+                        <Link to="/dashboard/updateprofile"> <i className='fa fa fa-edit'></i> Update Profile</Link>
                     </div>
                     <div className="profile-menu">
                         <ul>
@@ -28,6 +34,8 @@ const Dashboard = () => {
                             <li><Link to="/dashboard">Post</Link></li>
                             <li><Link to="/dashboard">Booking</Link></li>
                             <li><Link to="/dashboard">Sell</Link></li>
+                            <li><Link to="/dashboard/friend">Friend</Link></li>
+                            <li><Link to="/dashboard/Chat">Chat</Link></li>
                         </ul>
                     </div>
                 </div>

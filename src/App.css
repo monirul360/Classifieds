@@ -714,6 +714,13 @@ select {
   font-weight: 600;
 }
 
+.about-section .about-info svg {
+  width: 25px;
+  height: 25px;
+  color: #9c00ff;
+  margin-right: 7px;
+}
+
 /* =============post-form============= */
 
 .post-form input[type=submit] {
@@ -723,6 +730,27 @@ select {
   font-weight: 600;
   border: none;
   padding: 10px;
+}
+
+.updateprofile input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.updateprofile input[type=submit] {
+  background-color: #9801c0;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+}
+
+.updateprofile input:focus {
+  border: 2px solid #9801c0;
 }
 
 /* =============page-tittle=========== */

@@ -2,11 +2,14 @@ import React from 'react';
 import auth from '../../../Firebase';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import useToken from '../../../hooks/useToker';
 
 const SocialLogin = () => {
     const [signInWithGoogle, gouser, goloading, goerror] = useSignInWithGoogle(auth);
+    const [token] = useToken(gouser)
     const navigate = useNavigate();
-    if (gouser) {
+
+    if (token) {
         navigate("/")
     }
     return (
