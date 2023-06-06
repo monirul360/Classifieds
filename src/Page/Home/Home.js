@@ -9,6 +9,7 @@ import latestads4 from '././../../Img/04.jpg';
 import latestads from '././../../Img/ad-wide.jpg';
 import monirul from './../../Img/monirul.png'
 import LatestAds from '../../Component/LatestAds/LatestAds';
+import Cities from '../../Component/Cities/Cities';
 const Home = () => {
     return (
         <div>
@@ -198,49 +199,10 @@ const Home = () => {
 
                 </div>
             </div>
+            <Cities></Cities>
+            <div class="wideBanner">
+                <img src={latestads} alt="" />
 
-            <div class="section Cities-ads">
-                <div class="container">
-                    {/* title start  */}
-                    <div class="titleTop">
-                        <h1>Ads By <span>Cities</span></h1>
-                        <div className='tips-border'></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius, orci id facilisis egestas, neque purus sagittis arcu, nec maximus quam odio nec elit Pellentesque eget ipsum mattis</p>
-                    </div>
-                    {/* title end  */}
-                    <div class="topsearchwrap">
-                        <ul class="row catelist">
-                            <li class="col-md-3 col-sm-6"><a href="#">London <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">New York <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Atlanta <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Andalusia <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Anchorage <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Fairbanks <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Haines <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Flagstaff <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Prescott <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Arkadelphia <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Batesville <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Camden <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Forrest City <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Hot Springs <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Little Rock <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Alameda <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Arcadia <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Barstow <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Daly City <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Downey <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Huntington Beach <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Laguna Beach <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Modesto <span>(96 Teeutors)</span></a></li>
-                            <li class="col-md-3 col-sm-6"><a href="#">Rancho Cucamonga <span>(96 Teeutors)</span></a></li>
-                        </ul>
-                    </div>
-                    <div class="wideBanner">
-                        <img src={latestads} alt="" />
-
-                    </div>
-                </div>
             </div>
 
         </div>

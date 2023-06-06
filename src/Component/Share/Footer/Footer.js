@@ -11,7 +11,7 @@ const Footer = () => {
                             <div class="ft-logo">
                                 <h1>World's</h1>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et consequat elit. Proin molestie eros sed urna auctor lobortis. Integer eget scelerisque arcu. Pellentesque scelerisque pellentesque nisl, sit amet aliquam mi pellentesque fringilla. Ut porta augue a libero pretium laoreet...</p>
+                            <p>At World's, we strive to provide you with the best platform to buy, sell, and connect with your local community. Our goal is to simplify the process of finding and posting classified ads, making it convenient and hassle-free for everyone.</p>
                         </div>
                         {/* About us End */}
 

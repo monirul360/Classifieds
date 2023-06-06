@@ -11,6 +11,7 @@ const Post = () => {
     const email = user?.email;
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
+        console.log(data);
         const freeAds = {
             name: name,
             email: email,
@@ -21,21 +22,21 @@ const Post = () => {
             condition: data.condition,
         }
         // send to your database 
-        fetch('http://localhost:5000/freeads', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify(freeAds)
-        }).then(res => res.json())
-            .then(inserted => {
-                if (inserted.insertedId) {
-                    toast.success('Add Review successfull');
-                    reset();
-                } else {
-                    toast.error('Failed to Add Review');
-                }
-            })
+        //     fetch('http://localhost:5000/freeads', {
+        //         method: 'POST',
+        //         headers: {
+        //             'content-type': 'application/json',
+        //         },
+        //         body: JSON.stringify(freeAds)
+        //     }).then(res => res.json())
+        //         .then(inserted => {
+        //             if (inserted.insertedId) {
+        //                 toast.success('Add Review successfull');
+        //                 reset();
+        //             } else {
+        //                 toast.error('Failed to Add Review');
+        //             }
+        //         })
     };
     return (
         <>
@@ -68,6 +69,7 @@ const Post = () => {
                             <option value="Used -Like Good">Used -Like Good</option>
                             <option value="condition">Used -Fair</option>
                         </select>
+                        <input className='form-control  my-2' type="file" {...register("photo")} id="" />
                         <input className='form-control' type="submit" value="Post Now" />
                     </form>
                 </div>

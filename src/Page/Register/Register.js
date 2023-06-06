@@ -20,10 +20,10 @@ const Register = () => {
         const displayName = data.name;
         const email = data.email;
         const password = data.password
-        await updateProfile({ displayName });
         await createUserWithEmailAndPassword(email, password)
+        await updateProfile({ displayName });
     };
-    const [token] = useToken(user)
+    const [token] = useToken(user);
     const nevigate = useNavigate();
     if (token) {
         nevigate("/");

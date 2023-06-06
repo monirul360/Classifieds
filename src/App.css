@@ -2,8 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
   /* background: #f6f6f6; */
+  font-family: 'Poppins', sans-serif;
 }
 
 ol,
@@ -790,6 +791,25 @@ textarea {
   padding: 25px 0px;
 }
 
+/* ==============error-section====== */
+.error-section {
+  width: fit-content;
+  display: block;
+  margin: auto;
+  position: relative;
+}
+
+.error-section h3 {
+  font-size: 50px;
+  position: absolute;
+  top: 250px;
+  left: 30%;
+  font-weight: bolder;
+  color: brown;
+  transform: rotateX(360deg);
+  display: none;
+}
+
 /* ==============footer============= */
 .footerWrap {
   background: #ddd url("./Img/ft-buildings.png") repeat-x top;
@@ -840,7 +860,6 @@ textarea {
   list-style: none;
 }
 
-.footerWrap .quicklinks li {}
 
 .footerWrap .quicklinks li a {
   display: block;

@@ -17,6 +17,8 @@ import { formatDistance, subDays } from 'date-fns'
 import UpdateProfile from './Dashboard/UpdateProfile/UpdateProfile';
 import Friend from './Dashboard/Friend/Friend';
 import Chat from './Dashboard/Chat/Chat';
+import Error from './Page/Error/Error';
+import Aboutus from './Page/Aboutus/Aboutus';
 formatDistance(subDays(new Date(), 3), new Date(), { addSuffix: true })
 function App() {
   AOS.init();
@@ -25,6 +27,7 @@ function App() {
       <Nav></Nav>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/aboutus' element={<Aboutus></Aboutus>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='dashboard' element={
@@ -41,6 +44,7 @@ function App() {
           <Route path='friend' element={<Friend></Friend>}></Route>
           <Route path='chat' element={<Chat></Chat>}></Route>
         </Route>
+        <Route path='*' element={<Error></Error>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer />
