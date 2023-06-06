@@ -19,6 +19,7 @@ import Friend from './Dashboard/Friend/Friend';
 import Chat from './Dashboard/Chat/Chat';
 import Error from './Page/Error/Error';
 import Aboutus from './Page/Aboutus/Aboutus';
+import Contact from './Page/Contact/Contact';
 formatDistance(subDays(new Date(), 3), new Date(), { addSuffix: true })
 function App() {
   AOS.init();
@@ -30,6 +31,7 @@ function App() {
         <Route path='/aboutus' element={<Aboutus></Aboutus>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='dashboard' element={
           <Private>
             <Dashboard></Dashboard>
