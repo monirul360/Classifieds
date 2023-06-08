@@ -23,6 +23,9 @@ import Contact from './Page/Contact/Contact';
 import FAQs from './Page/FAQs/FAQs';
 import Careers from './Page/Careers/Careers';
 import Privacy_Policy from './Page/Privacy_Policy/Privacy_Policy';
+import AccountIssue from './Page/AccountIssue/AccountIssue';
+import History from './Page/History/History';
+import TermsofServices from './Page/TermsofServices/TermsofServices';
 formatDistance(subDays(new Date(), 3), new Date(), { addSuffix: true })
 function App() {
   AOS.init();
@@ -38,6 +41,9 @@ function App() {
         <Route path='/faqs' element={<FAQs></FAQs>}></Route>
         <Route path='/careers' element={<Careers></Careers>}></Route>
         <Route path='/privacypolicy' element={<Privacy_Policy></Privacy_Policy>}></Route>
+        <Route path='/accountIssue' element={<AccountIssue></AccountIssue>}></Route>
+        <Route path='/history' element={<History></History>}></Route>
+        <Route path='/TermsofServices' element={<TermsofServices></TermsofServices>}></Route>
         <Route path='dashboard' element={
           <Private>
             <Dashboard></Dashboard>

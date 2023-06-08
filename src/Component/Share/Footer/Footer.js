@@ -41,11 +41,11 @@ const Footer = () => {
                             <ul class="quicklinks">
                                 <li><Link to="/contact">Help &amp; Support</Link></li>
                                 <li><Link to="/faqs">FAQs</Link></li>
-                                <li><Link to="#.">Account Issue</Link></li>
+                                <li><Link to="/accountIssue">Account Issue</Link></li>
                                 <li><Link to="#.">Fake Ads</Link></li>
                                 <li><Link to="#.">Buy Membership</Link></li>
-                                <li><Link to="#.">Terms of Services</Link></li>
-                                <li><Link to="#.">History</Link></li>
+                                <li><Link to="/TermsofServices">Terms of Services</Link></li>
+                                <li><Link to="/history">History</Link></li>
                             </ul>
                             {/* Industry menu End */}
                             <div class="clear"></div>

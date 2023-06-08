@@ -10,6 +10,7 @@ const Nav = () => {
     const singout = () => {
         signOut(auth);
     }
+
     return (
         <div>
             <div className="top-bar">
@@ -37,9 +38,14 @@ const Nav = () => {
                                 </svg></Link></li>
                             </ul>
                         </div>
-                        <div className="post">
-                            <Link to="/">Post now</Link>
+
+                        <div className="d-flex">
+                            <div id="google_translate_element"></div>
+                            <div className="post ms-4">
+                                <Link to="/">Post now</Link>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -99,10 +105,10 @@ const Nav = () => {
                                 <div className="nav_profile_nevigate py-3 ps-3">
                                     <ul>
                                         <li><Link to='/dashboard'>Videw Profile</Link></li>
-                                        <li><Link to='/dashboard'>Videw Profile</Link></li>
-                                        <li><Link to='/dashboard'>Videw Profile</Link></li>
-                                        <li><Link to='/dashboard'>Videw Profile</Link></li>
-                                        <li><Link to='/dashboard'>Videw Profile</Link></li>
+                                        <li><Link to='/dashboard'>Update Information</Link></li>
+                                        <li><Link to='/dashboard'>Add Post</Link></li>
+                                        <li><Link to='/dashboard'>Help & support</Link></li>
+                                        <li><Link to='/dashboard'>Account Issue</Link></li>
                                         <li><button onClick={() => singout()}>Log Out</button></li>
                                     </ul>
                                 </div>
