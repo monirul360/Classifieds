@@ -20,7 +20,7 @@ const SocialLogin = () => {
                     {goloading && <h5 style={{ color: "#9c00ff" }}>Loading....</h5>}
                     <h5 className='text-danger fw-bold'>{goerror?.message}</h5>
                 </div>
-                <button onClick={() => signInWithGoogle()} to="/" class="gp"><i class="fa fa-google-plus" aria-hidden="true"></i>Continue with Google</button>
+                <button onClick={() => signInWithGoogle()} class="gp"><i class="fa fa-google-plus" aria-hidden="true"></i>Continue with Google</button>
             </div>
         </>
     );

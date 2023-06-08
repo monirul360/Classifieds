@@ -20,6 +20,9 @@ import Chat from './Dashboard/Chat/Chat';
 import Error from './Page/Error/Error';
 import Aboutus from './Page/Aboutus/Aboutus';
 import Contact from './Page/Contact/Contact';
+import FAQs from './Page/FAQs/FAQs';
+import Careers from './Page/Careers/Careers';
+import Privacy_Policy from './Page/Privacy_Policy/Privacy_Policy';
 formatDistance(subDays(new Date(), 3), new Date(), { addSuffix: true })
 function App() {
   AOS.init();
@@ -32,6 +35,9 @@ function App() {
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
+        <Route path='/faqs' element={<FAQs></FAQs>}></Route>
+        <Route path='/careers' element={<Careers></Careers>}></Route>
+        <Route path='/privacypolicy' element={<Privacy_Policy></Privacy_Policy>}></Route>
         <Route path='dashboard' element={
           <Private>
             <Dashboard></Dashboard>

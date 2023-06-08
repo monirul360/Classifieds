@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import Showpost from './Showpost';
@@ -9,9 +9,38 @@ const Post = () => {
     const [user] = useAuthState(auth);
     const name = user?.displayName;
     const email = user?.email;
+    // const [ip, setIp] = useState({});
+    // const handleip = ip => {
+    //     fetch(`https://ipinfo.io/${ip}?token=8f549658ffeece`)
+    //         .then(res => res.json())
+    //         .then(data => setIp(data))
+    // }
+    // const getIPAddress = () => {
+    //     fetch("https://api.ipify.org?format=json")
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             handleip(data.ip)
+    //         })
+    // }
+    // getIPAddress()
     const { register, handleSubmit, reset } = useForm();
+    const imgkey = "c92537da5892feddd27d0afd1c2fb0e5";
     const onSubmit = data => {
         console.log(data);
+        const photo = data.photo[0];
+        const formData = new FormData();
+        formData.append("photo", photo);
+        const url = `https://api.imgbb.com/1/upload?key=${imgkey}`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: formData
+        }).then(res => res.json())
+            .then(result => {
+                console.log(result);
+            });
         const freeAds = {
             name: name,
             email: email,
@@ -46,7 +75,8 @@ const Post = () => {
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <input className='form-control py-3 my-2' type="text" name="" placeholder='Title' {...register("title")} required />
                         <textarea className='form-control py-3 my-2' name="" placeholder='Description' {...register("Description")} id="" required></textarea>
-                        <input className='form-control py-3 my-2' type="text" name="" placeholder='Price' {...register("price")} id="" required />
+                        <input className='form-control py-3 my-2' type="Number" name="" placeholder='Price' {...register("price")} id="" required />
+                        <input className='form-control py-3 my-2' type="number" name="" placeholder='Phone Number' {...register("number")} id="" required />
                         <select className='form-control  my-2' {...register("category")} id="" required>
                             <option value="" disabled selected>Category</option>
                             <option value="Vehicles">Vehicles</option>

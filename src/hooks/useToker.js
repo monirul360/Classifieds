@@ -45,7 +45,7 @@ const useToken = user => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    setToken(data);
+                    // console.log(data);
                 })
         }
     }, [user])

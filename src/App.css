@@ -662,6 +662,33 @@ select {
   color: #130E35;
 }
 
+/* =============privacy-policy============== */
+.privacy-policy .item {
+  margin: 30px 0px;
+}
+
+.privacy-policy .item h3 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #9c00ff;
+}
+
+.privacy-policy .item p {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #474849;
+}
+
+.privacy-policy .item span {
+  color: #9801c0;
+  font-size: 25px;
+  margin-right: 4px;
+}
+
 /* =============dashboard-section========== */
 
 
