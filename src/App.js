@@ -26,6 +26,9 @@ import Privacy_Policy from './Page/Privacy_Policy/Privacy_Policy';
 import AccountIssue from './Page/AccountIssue/AccountIssue';
 import History from './Page/History/History';
 import TermsofServices from './Page/TermsofServices/TermsofServices';
+import Bloges from './Page/Bloge/Bloges';
+import BlogeDetailes from './Page/Bloge/BlogeDetailes';
+
 formatDistance(subDays(new Date(), 3), new Date(), { addSuffix: true })
 function App() {
   AOS.init();
@@ -38,6 +41,8 @@ function App() {
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
+        <Route path='/bloge' element={<Bloges></Bloges>}></Route>
+        <Route path='/blogeDetail/:Id' element={<BlogeDetailes></BlogeDetailes>}></Route>
         <Route path='/faqs' element={<FAQs></FAQs>}></Route>
         <Route path='/careers' element={<Careers></Careers>}></Route>
         <Route path='/privacypolicy' element={<Privacy_Policy></Privacy_Policy>}></Route>

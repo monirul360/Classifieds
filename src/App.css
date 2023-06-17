@@ -884,6 +884,8 @@ textarea {
   display: none;
 }
 
+
+
 /* ==============footer============= */
 .footerWrap {
   background: #ddd url("./Img/ft-buildings.png") repeat-x top;
@@ -1156,5 +1158,103 @@ textarea {
     width: 100%;
     height: 180px;
   }
+}
+
+/* =======bloge======= */
+
+.bloge-img{
+  max-width: 100%;
+}
+
+.bloge-container{
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+.blog-title{
+  margin-top: 10px;
+}
+
+
+@media (max-width:620px) {
+ 
+  .bloge-container{
+    max-width:100% ;
+    text-align: center;
+  }
+  
+  .blog-items{
+    display: grid;
+    gap: 20px;
+    grid-template-columns:300px;
+    max-width:80%;
+    margin-top: 80px;
+    margin:0 auto;
+   
+  }
 
 }
+
+
+@media (min-width:700px) {
+  .bloge-container{
+    max-width:100% ;
+    text-align: center;
+  }
+  
+  .blog-items{
+    display: grid;
+    gap: 20px;
+    grid-template-columns:300px 300px;
+    max-width:80%;
+    margin: 0 auto;
+    text-align: none;
+  }
+  .bloge-card{
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 8px;
+  }
+}
+@media (min-width:1000px) {
+  nav .dropdown {
+    display: none;
+  }
+ 
+  .blog-items{
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 300px 300px 300px;
+    width: 1000px;
+    margin-top: 80px;
+  }
+  .bloge-card{
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 8px;
+  }
+}
+
+/* ============= blogeDetail page style */
+
+.blog_title{
+  font-size: 18px;
+  margin-top: 40px;
+  line-height: 2.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+ 
+  .blogs_imges{
+     width:100%;
+  }
+}
+
+@media (min-width: 768px) { 
+  .blogs_imges{
+    width:100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+ }
+ }
