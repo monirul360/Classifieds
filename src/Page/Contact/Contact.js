@@ -1,7 +1,39 @@
-import React from 'react';
+
 import Tittle from '../../Component/Share/Tittle/Tittle';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+
+const Result =()=>{
+    return(<p>Your message has been successfull</p>)  
+  }
 
 const Contact = () => {
+    const [result,showResult]=useState(false)
+
+    // const form = useRef();
+    
+    const sendEmail = (e) => {
+
+    e.preventDefault();
+
+    emailjs.sendForm( 'service_h2qxfbl', 'template_g8pzl2g', e.target,'XmBQScJsejFV8ZNEa')
+
+        .then((result) => {
+            console.log(result.text);
+        }, 
+        (error) => {
+            console.log(error.text);
+        });
+
+        e.target.reset();
+        showResult(true)
+    };
+     
+    // hide result 
+    setTimeout(()=>{
+        showResult(false)
+    },5000)
+
     return (
         <div>
             <Tittle tittle="Contact-Us" self="Contact-Us"></Tittle>
@@ -11,7 +43,7 @@ const Contact = () => {
                         <div className="col-lg-6">
                             <div style={{ background: "#9801c0" }} className='p-4'>
                                 <h3 className='text-center text-white py-4'>Contact Us</h3>
-                                <form className="contact-form">
+                                <form  onSubmit={sendEmail} className="contact-form">
                                     <div className="form-group">
                                         <input type="text" class="form-control p-3 " name="name" placeholder="Your Name" required />
                                     </div>
@@ -30,6 +62,7 @@ const Contact = () => {
 
                                 </form>
                             </div>
+                            <div className='mt-3 mb-5  text-success fw-bold fs-5'> {result ? <Result/> : null} </div>
                         </div>
                         <div className="col-lg-6">
                             <div className="contact-info p-4">
