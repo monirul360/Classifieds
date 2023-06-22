@@ -1,0 +1,142 @@
+[
+    {
+        "id": "1",
+        "tittle": "Oakwood Studios Sukhumvit Bangkok",
+        "img": "https://cf.bstatic.com/xdata/images/hotel/square200/375098303.webp?k=87f30bafde81908963639d150dfc7880d26c7820abdda38ae792ea47b78320c9&o=",
+        "description": "Studios Sukhumvit Bangkok has accommodations with an outdoor swimming pool, free private parking, a fitness center and a garden.",
+        "location": "Located in Bangkok,",
+        "Status": "Family room",
+        "date": "19/4/2023",
+        "Price": "1400/Monthly"
+    },
+    {
+        "id": "2",
+        "tittle": "Ascott Embassy Sathorn Bangkok - SHA Plus CertifiedOpens in new window",
+        "img": "https://cf.bstatic.com/xdata/images/hotel/square200/365474451.webp?k=c588394021e106b385ea22291ccdad9a05cb4e61a27e963693ab18533ba4d6a9&o=",
+        "description": "Located in Bangkok, a 19-minute walk from Lumpini Park, Ascott Embassy Sathorn Bangkok - SHA Plus Certified provides accommodations with an outdoor swimming pool, free private parking, a fitness...",
+        "location": "Located in Bangkok",
+        "Status": "Family room",
+        "date": "19/4/2023",
+        "Price": "1800/Monthly"
+    },
+    {
+        "id": "3",
+        "tittle": "Thana Wisut Hotel - SHA PlusOpens in new window",
+        "img": "https: //cf.bstatic.com/xdata/images/hotel/square200/463280013.webp?k=df2e73eb1826be1d49e83b3d7b02a353b115ac4410f8c81211a1caf14d77a44e&o=",
+        "description": "Featuring 3-star accommodations, Thana Wisut Hotel - SHA Plus is located in Bangkok, a 15-minute walk from Wat Saket and 0.7 miles from Khao San Road.",
+        "location": "Bangkok",
+        "Status": "Family room",
+        "date": "19/4/2023",
+        "Price": "1400/Monthly"
+    },
+    {
+        "id": "4",
+        "tittle": "Dinsomon HotelOpens in new window",
+        "img": "https: //cf.bstatic.com/xdata/images/hotel/square200/274459119.webp?k=811d1b1a4ad3d7315913a81876c0dbdd34b303404df0775b949f390211b982af&o=",
+        "description": "Dinsomon Hotel has a garden, shared lounge, a restaurant and bar in Bangkok. The property is around 1.2 miles from Temple of the Emerald Buddha, 1.2 miles from Grand Palace and 1.7 miles from Wat Pho....",
+        "location": "Bangkok",
+        "Status": "Family room",
+        "date": "19/4/2023",
+        "Price": "1400/Monthly"
+    },
+    {
+        "id": "5",
+        "tittle": "Furama Silom HotelOpens in new window",
+        "img": "https://cf.bstatic.com/xdata/images/hotel/square200/216634325.webp?k=c7ef5c4fea7339b4b9b75b1e27f4c9c48c3dff8d124e6f98cccef65c79b0e751&o=",
+        "description": "The centrally-located Furama Silom Hotel offers cozy accommodations with kitchenettes and views of the city, about one mile from MBK Shopping Mall.",
+        "location": "Bogura",
+        "Status": "Family room",
+        "date": "19/4/2023",
+        "Price": "1400/Monthly"
+    },
+    {
+        "id": "6",
+        "tittle": "Oakwood Hotel & Residence Bangkok SHA Plus CertifiedOpens in new window",
+        "img": "https: //cf.bstatic.com/xdata/images/hotel/square200/350799299.webp?k=da1c807833b9ed3519b1cbaef80e02f3146d8d4d633b3a0883998122a7408008&o=",
+        "description": "Oakwood Hotel & Residence Bangkok SHA Plus Certified is a 3-minute walk from Saphan Taksin BTS Skytrain Station. It has an outdoor pool, a restaurant, and separate sauna rooms.",
+        "location": "Bogura",
+        "Status": "Family room",
+        "date": "19/4/2023",
+        "Price": "1400/Monthly"
+    },
+    {
+        "id": "7",
+        "tittle": "Here Hostel Bangkok
+        Here Hostel Bangkok","img": "https: //cf.bstatic.com/xdata/images/hotel/square200/110111729.webp?k=d96ce32d4209ee00539a254977b4e744bfe73ca5b04162bad36b6c2a98336390&o=",
+        "description": "Here Hostel is located in Bangkok, 2297 feet from Khao San Road. Free WiFi access is available in this hostel. Free coffee and tea can be enjoyed at the communal pantry daily.",
+        "location": "Bogura",
+        "Status": "Family room",
+        "date": "19/4/2023",
+        "Price": "1400/Monthly"
+    },
+    {
+        "id": "8",
+        "tittle": "Daraya Boutique HotelOpens in new window",
+        "img": "https://cf.bstatic.com/xdata/images/hotel/square200/220338812.webp?k=f0ce979cd0228b065f1d9af732d41f35e43a2ce37e20b8461675c782b9c4d238&o=",
+        "description": "Located in Bangkok and with The Jim Thompson House reachable within a 4-minute walk, Daraya Boutique Hotel has concierge services, non-smoking rooms, an outdoor swimming pool, free WiFi and a shared...",
+        "location": "Bogura",
+        "Status": "Family room",
+        "date": "19/4/2023",
+        "Price": "1400/Monthly"
+    },
+    {
+        "id": "9",
+        "tittle": "D&D Inn KhaosanOpens in new window",
+        "img": "https://cf.bstatic.com/xdata/images/hotel/square200/162142877.webp?k=3cbd061f72d481d2d635666bdf08601c383210883b7162b39d41a3b72a66d5c3&o=",
+        "description": "D&D Inn is located on the lively Khaosan Road. Located on its rooftop are a outdoor pool with views of the skyline. Free WiFi is available throughout the property.",
+        "location": "Bogura",
+        "Status": "Family room",
+        "date": "19/4/2023",
+        "Price": "1400/Monthly"
+    },
+    {
+        "id": "10",
+        "tittle": "",
+        "img": "",
+        "description": "",
+        "location": "Bogura",
+        "Status": "Family room",
+        "date": "19/4/2023",
+        "Price": "1400/Monthly"
+    },
+    {
+        "id": "11",
+        "tittle": "",
+        "img": "",
+        "description": "",
+        "location": "Bogura",
+        "Status": "Family room",
+        "date": "19/4/2023",
+        "Price": "1400/Monthly"
+    },
+    {
+        "id": "12",
+        "tittle": "",
+        "img": "",
+        "description": "",
+        "location": "Bogura",
+        "Status": "Family room",
+        "date": "19/4/2023",
+        "Price": "1400/Monthly"
+    },
+    {
+        "id": "13",
+        "tittle": "",
+        "img": "",
+        "description": "",
+        "location": "Bogura",
+        "Status": "Family room",
+        "date": "19/4/2023",
+        "Price": "1400/Monthly"
+    },
+    {
+        "id": "14",
+        "tittle": "",
+        "img": "",
+        "description": "",
+        "location": "Bogura",
+        "Status": "Family room",
+        "date": "19/4/2023",
+        "Price": "1400/Monthly"
+    }
+]

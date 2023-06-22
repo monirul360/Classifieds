@@ -36,77 +36,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className='Featured'>
-                <div className="container">
-                    <h1 className='title'>Featured <span> Ads</span></h1>
-                    <div className="tips-border"></div>
-                    <p className='content'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius, orci id facilisis egestas, neque purus</p>
-                    <p className='content'>sagittis arcu, nec maximus quam odio nec elit Pellentesque eget ipsum mattis</p>
-                    <ul class="row gridlist pt-4">
-                        <li class="col-lg-6 col-xl-3  col-sm-6">
-                            <div class="adimg">
-                                <a href="">
-                                    <img src={latestads1} alt="" />
-                                </a>
-                            </div>
-                            <div class="info">
-                                <h3><a href="#">Canon SX Powershot A Great D-SLR</a></h3>
-                                <div class="row location">
-                                    <div class="col-md-6"><i class="fa fa-map-marker" aria-hidden="true"></i> Atlanta, GA</div>
-                                    <div class="col-md-6"><i class="fa fa-clock-o" aria-hidden="true"></i> 2:49 pm</div>
-                                </div>
-                                <div class="price">$206.90</div>
-                            </div>
-                        </li>
-                        <li class="col-lg-6 col-xl-3 col-sm-6">
-                            <div class="adimg">
-                                <a href="">
-                                    <img src={latestads2} alt="" />
-                                </a>
-                            </div>
-                            <div class="info">
-                                <h3><a href="#">Smasung Glaxy Phone</a></h3>
-                                <div class="row location">
-                                    <div class="col-md-6"><i class="fa fa-map-marker" aria-hidden="true"></i> Atlanta, GA</div>
-                                    <div class="col-md-6"><i class="fa fa-clock-o" aria-hidden="true"></i> 2:49 pm</div>
-                                </div>
-                                <div class="price">$206.90</div>
-                            </div>
-                        </li>
-                        <li class="col-lg-6 d-xl-block d-none  col-xl-3 col-sm-6">
-                            <div class="adimg">
-                                <a href="">
-                                    <img src={latestads3} alt="" />
-                                </a>
-                            </div>
-                            <div class="info">
-                                <h3><a href="#">BMW F20 1 Series Hatchback 5-door</a></h3>
-                                <div class="row location">
-                                    <div class="col-md-6"><i class="fa fa-map-marker" aria-hidden="true"></i> Atlanta, GA</div>
-                                    <div class="col-md-6"><i class="fa fa-clock-o" aria-hidden="true"></i> 2:49 pm</div>
-                                </div>
-                                <div class="price">$206.90</div>
-                            </div>
-                        </li>
-                        <li class="col-lg-6 d-xl-block d-none  col-xl-3 col-sm-6">
-                            <div class="adimg">
-                                <a href="">
-                                    <img src={latestads4} alt="" />
-                                </a>
-                            </div>
-                            <div class="info">
-                                <h3><a href="#">Labrador male for stud/matting</a></h3>
-                                <div class="row location">
-                                    <div class="col-md-6"><i class="fa fa-map-marker" aria-hidden="true"></i> Atlanta, GA</div>
-                                    <div class="col-md-6"><i class="fa fa-clock-o" aria-hidden="true"></i> 2:49 pm</div>
-                                </div>
-                                <div class="price">$206.90</div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <Catagory></Catagory>
+            {/* <Catagory></Catagory> */}
             <LatestAds></LatestAds>
             <div class="section  howitwrap">
                 <div class="container">

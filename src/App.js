@@ -28,15 +28,27 @@ import History from './Page/History/History';
 import TermsofServices from './Page/TermsofServices/TermsofServices';
 import Bloges from './Page/Bloge/Bloges';
 import BlogeDetailes from './Page/Bloge/BlogeDetailes';
-
+import { useEffect, useState } from 'react';
+import Dhaka from './Component/Cities/DhakaDivision/Dhaka';
+import Gazipur from './Component/Cities/DhakaDivision/Gazipur';
 formatDistance(subDays(new Date(), 3), new Date(), { addSuffix: true })
 function App() {
   AOS.init();
+  const [ip, setip] = useState('');
+  useEffect(() => {
+    fetch("https://geolocation-db.com/json/")
+      .then(res => res.json())
+      .then(data => setip(data));
+  }, [])
+  console.log(ip);
   return (
     <>
       <Nav></Nav>
       <Routes>
-        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/' element={<Home></Home>}>
+          <Route index element={<Dhaka></Dhaka>}></Route>
+          <Route path='Gazipur' element={<Gazipur></Gazipur>}></Route>
+        </Route>
         <Route path='/aboutus' element={<Aboutus></Aboutus>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
