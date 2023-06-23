@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Dhaka = () => {
     const post = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
     return (
-        <div className='city-filter p-3 m-1'>
+        <div className='city-filter'>
             <div className="tittle">
                 <h3>Dhaka Division , <span>Dhaka</span></h3>
                 <p>Found results <span>50+</span></p>

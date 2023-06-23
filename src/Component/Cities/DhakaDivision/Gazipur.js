@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Gazipur = () => {
     const post = [1, 2, 3, 4];
     return (
-        <div className='city-filter p-3 m-1'>
+        <div className='city-filter'>
             <div className="tittle">
                 <h3>Dhaka Division , <span>Gazipur</span></h3>
                 <p>Found results <span>5+</span></p>

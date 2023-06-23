@@ -389,6 +389,11 @@ select {
 }
 
 /* ============city-filter========= */
+.city-filter {
+  padding: 15px;
+  margin: 4px;
+}
+
 .city-filter .tittle h3 {
   font-size: 22px;
 }
@@ -918,6 +923,106 @@ textarea {
   border: 2px solid #9801c0;
 }
 
+/*========== moni310020rul======== */
+.moni310020rul {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.moni310030rul {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7AA93C;
+  padding: 30px;
+  border-radius: 50%;
+  border: 2px solid #9801c0;
+  position: absolute;
+  left: 88px;
+  z-index: 100;
+}
+
+.moni310030rul i {
+  font-size: 45px;
+  color: #9801c0;
+  text-shadow: 3px 1px #130E35;
+}
+
+.moni310030rul h3 {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.moni310040rul {
+  width: fit-content;
+  background-color: #9801c0;
+  color: #F0F2F5;
+  padding: 14px;
+  padding-right: 5px;
+  text-transform: uppercase;
+  z-index: 99;
+  margin-left: 25px;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  border-bottom: 2px solid #130E35;
+}
+
+.moni310050rul {
+  width: fit-content;
+  background-color: #9801c0;
+  color: #F0F2F5;
+  padding: 14px;
+  padding-left: 3px;
+  margin-left: 5px;
+  border-top: 2px solid #130E35;
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
+}
+
+.moni310040rul h5,
+.moni310050rul h5 {
+  margin-bottom: 0px !important;
+  margin-left: 25px;
+  padding-right: 20px;
+}
+
+.mo310060 {
+  color: #9801c0;
+}
+
+.mo310060 input,
+select {
+  width: 100%;
+  display: block;
+  padding: 14px;
+  margin-bottom: 17px;
+}
+
+
+
+.mo310060 input,
+textarea,
+select {
+  border: 1px solid #9801c0;
+}
+
+.mo310060 textarea {
+  resize: none;
+}
+
+.mo310060 label {
+  margin-left: 2px;
+}
+
+.mo310060 input[type=submit] {
+  background-color: #9801c0;
+  color: white;
+}
+
 /* =============page-tittle=========== */
 .page-tittle {
   background: url("./Img/page-title-bg.jpg") no-repeat;
@@ -1266,13 +1371,19 @@ textarea {
     display: block;
   }
 
-
-
   .gridlist .info {
     width: 100%;
   }
+
+
 }
 
+@media (max-width:979px) {
+  .city-filter {
+    padding: 0px;
+    margin: 10px 0px;
+  }
+}
 
 @media (max-width:576px) {
   .gridlist .adimg img {
