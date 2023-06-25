@@ -2,19 +2,53 @@ import React, { useEffect, useState } from 'react';
 import userimg from './../../Icon/user.png'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase';
+import { useQuery } from '@tanstack/react-query';
 const Showpost = () => {
     const [user, loading] = useAuthState(auth);
-    const [post, setpost] = useState([]);
+
+
+    // const { refetch, isLoading, error, data } = useQuery({
+    //     queryKey: ['repoData'],
+    //     queryFn: () =>
+    //         fetch(`http://localhost:5000/userfreeads?email=${user.email}`).then(
+    //             (res) => res.json(),
+    //         ),
+    // })
+    // if (isLoading) return <p>Loading</p>
+
+    const [data, setState] = useState([])
+    const [timer, setTimer] = useState(null)
+    const [isMounted, setIsMounted] = useState(false)
+
+    async function updateDevicePosition() {
+        try {
+            const result = await fetch(`http://localhost:5000/userfreeads?email=${user.email}`, {
+                method: 'GET',
+                headers: {
+                    authorization: `${localStorage.getItem('accesToken')}`
+                }
+            })
+            const data = await result.json()
+            setState(data)
+        } catch (e) {
+            console.error(e)
+        }
+        clearTimeout(timer)
+        setTimer(setTimeout(updateDevicePosition, 200))
+    }
+
     useEffect(() => {
-        fetch(`http://localhost:5000/userfreeads?email=${user.email}`)
-            .then(res => res.json())
-            .then(data => setpost(data));
-    }, [user])
+        if (!isMounted) {
+            updateDevicePosition()
+            setIsMounted(true)
+        }
+    })
+
     return (
         <div>
             <div className="row my-4">
                 {
-                    post.map(show =>
+                    data.map(show =>
                         <div className="col-md-6">
                             <div class="card my-3">
                                 <div class="card-body">

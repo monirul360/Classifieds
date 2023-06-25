@@ -31,6 +31,8 @@ import BlogeDetailes from './Page/Bloge/BlogeDetailes';
 import { useEffect, useState } from 'react';
 import Dhaka from './Component/Cities/DhakaDivision/Dhaka';
 import Gazipur from './Component/Cities/DhakaDivision/Gazipur';
+import Review from './Dashboard/Review/Review';
+import User from './Dashboard/User/User';
 formatDistance(subDays(new Date(), 3), new Date(), { addSuffix: true })
 function App() {
   AOS.init();
@@ -74,6 +76,8 @@ function App() {
           </Route>
           <Route path='friend' element={<Friend></Friend>}></Route>
           <Route path='chat' element={<Chat></Chat>}></Route>
+          <Route path='review' element={<Review></Review>}></Route>
+          <Route path='user' element={<User></User>}></Route>
         </Route>
         <Route path='*' element={<Error></Error>}></Route>
       </Routes>

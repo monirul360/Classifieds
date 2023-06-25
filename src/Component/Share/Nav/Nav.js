@@ -9,6 +9,7 @@ const Nav = () => {
     const [shownav, setShownav] = useState(false);
     const singout = () => {
         signOut(auth);
+        localStorage.removeItem("accestoken")
     }
 
     return (
