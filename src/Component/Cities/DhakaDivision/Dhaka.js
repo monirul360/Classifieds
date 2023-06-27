@@ -14,6 +14,7 @@ const Dhaka = () => {
                 <Link to='/'>Mass</Link>
                 <Link to='/'>Hostel</Link>
                 <Link to='/'>Office</Link>
+                <h2>This is Daka</h2>
             </div>
             {/* content section */}
             {
