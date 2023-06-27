@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { COUNTER_CONTEXT } from '../../App';
 
 const Filter = () => {
     const [dhaka, setdhaka] = useState(true);
@@ -10,6 +11,62 @@ const Filter = () => {
     const [Chittagong, setChittagong] = useState(false);
     const [Sylhet, setSylhet] = useState(false);
     const [Mymensingh, setMymensingh] = useState(false);
+
+    
+ const {setFilter,activeCatagory,setActivecatagory,items}=useContext(COUNTER_CONTEXT)
+ 
+ useEffect(()=>{
+ 
+     const filterCatagory = items.filter(item=>  activeCatagory === "All" ? item: item.category === activeCatagory);
+     setFilter(filterCatagory)
+ 
+ },[setFilter,activeCatagory,setActivecatagory,items])
+  
+  const dhakaDivision= [
+     {"id":0,
+     "name":"All"
+     
+     },
+     {"id":1,
+     "name":"Dhaka"
+     },
+     {"id":2,
+     "name":"Gazipur",
+     },
+     {"id":3,
+     "name":"Kishoreganj",
+     },
+     {"id":4,
+     "name":"Manikganj",
+     },
+     {"id":5,
+     "name":"Munshiganj",
+     },
+     {"id":6,
+     "name":"Narayanganj",
+     },
+     {"id":7,
+     "name":"Narsingdi",
+     },
+     {"id":8,
+     "name":"Tangail",
+     },
+     {"id":9,
+     "name":"Faridpur",
+     },
+     {"id":10,
+     "name":"Gopalganj",
+     },
+     {"id":11,
+     "name":"Madaripur",
+     },
+     {"id":12,
+     "name":"Rajbari",
+     },
+     {"id":13,
+     "name":"Shariatpur",
+     }, ]
+ 
     return (
         <div>
             <div className="row filter-item my-4 py-3">
@@ -35,8 +92,18 @@ const Filter = () => {
                             </div>
                             <div className={`${dhaka ? "menu" : "c4c4c4c4c4c4c4c"}`}>
                                 <ul>
-                                    <li><Link to="/">Dhaka</Link></li>
-                                    <li><Link to="/Gazipur">Gazipur</Link></li>
+
+                                   {
+                                        dhakaDivision.map(dhaka=> <li
+                                        style={{cursor:"pointer",width:120}}
+                                            onClick={()=> setActivecatagory(dhaka.name)}
+                                            setActivecatagory={ setActivecatagory}
+                                            active={activeCatagory}
+                                            className={`${ activeCatagory === dhaka.name && ' bg-success rounded ps-2'}`}
+                                            >{dhaka.name}</li>)
+                                    }
+                                   
+                                    {/* <li><Link to="/Gazipur">Gazipur</Link></li>
                                     <li><Link to="/">Kishoreganj</Link></li>
                                     <li><Link to="/">Manikganj</Link></li>
                                     <li><Link to="/">Munshiganj</Link></li>
@@ -47,7 +114,7 @@ const Filter = () => {
                                     <li><Link to="/">Gopalganj</Link></li>
                                     <li><Link to="/">Madaripur</Link></li>
                                     <li><Link to="/">Rajbari</Link></li>
-                                    <li><Link to="/">Shariatpur</Link></li>
+                                    <li><Link to="/">Shariatpur</Link></li> */}
                                 </ul>
                             </div>
                         </div>

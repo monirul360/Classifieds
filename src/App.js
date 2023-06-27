@@ -28,11 +28,12 @@ import History from './Page/History/History';
 import TermsofServices from './Page/TermsofServices/TermsofServices';
 import Bloges from './Page/Bloge/Bloges';
 import BlogeDetailes from './Page/Bloge/BlogeDetailes';
-import { useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import Dhaka from './Component/Cities/DhakaDivision/Dhaka';
 import Gazipur from './Component/Cities/DhakaDivision/Gazipur';
 import Review from './Dashboard/Review/Review';
 import User from './Dashboard/User/User';
+export const COUNTER_CONTEXT= createContext()
 formatDistance(subDays(new Date(), 3), new Date(), { addSuffix: true })
 function App() {
   AOS.init();
@@ -43,8 +44,29 @@ function App() {
       .then(data => setip(data));
   }, [])
   console.log(ip);
+
+  const [items,setItems]=useState([]);
+  const [filter,setFilter]=useState([])
+  const [activeCatagory,setActivecatagory]=useState('All');
+  const value= {items,setItems,filter,setFilter,activeCatagory,setActivecatagory};
+
+
+       // Fech API DATA
+       useEffect(()=>{
+        const fechProducts= async()=>{
+            try{
+              const data= await fetch(`product.json`) 
+               const product= await data.json();
+               setItems(product)
+               setFilter(product)
+            }catch (error){}
+        }
+        fechProducts();
+    },[]);
+
   return (
     <>
+    <COUNTER_CONTEXT.Provider value={value}>
       <Nav></Nav>
       <Routes>
         <Route path='/' element={<Home></Home>}>
@@ -83,6 +105,7 @@ function App() {
       </Routes>
       <Footer></Footer>
       <ToastContainer />
+     </COUNTER_CONTEXT.Provider>
     </>
   );
 }
