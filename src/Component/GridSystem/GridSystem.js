@@ -54,6 +54,7 @@ const GridSystem = () => {
                             <div className='col'>
                             <div className="info">
                                     <h3>Name:{item.category}</h3>
+                                    <h3>{item.type}</h3>
                                     {/* <h3>ASTRA @ 8 Kia Peng SuitesOpens in new window </h3> */}
                                     <div className="location d-flex align-items-center my-2">
                                         <div className="icon">
