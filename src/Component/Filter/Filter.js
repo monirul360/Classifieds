@@ -1,6 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { COUNTER_CONTEXT } from '../../App';
+import React, {useState } from 'react';
+import DhakaDivision from '../All of Bangladesh/DhakaDev/DhakaDivision/DhakaDivision';
+import RajshahiDivision from '../All of Bangladesh/RajshahiDivision/RajshahiDivision';
+import RangpurDivision from '../All of Bangladesh/RangpurDivision/RangpurDivision';
+import KhulnaDivision from '../All of Bangladesh/KhulnaDivision/KhulnaDivision';
+import BarisalDivision from '../All of Bangladesh/BarisalDivision/BarisalDivision';
+import ChittagongDivison from '../All of Bangladesh/ChittagongDivison/ChittagongDivison';
+import SylhetDivision from '../All of Bangladesh/SylhetDivision/SylhetDivision';
+import MymensingDivision from '../All of Bangladesh/MymensinghDivision/MymensingDivision';
 
 const Filter = () => {
     const [dhaka, setdhaka] = useState(true);
@@ -11,61 +17,6 @@ const Filter = () => {
     const [Chittagong, setChittagong] = useState(false);
     const [Sylhet, setSylhet] = useState(false);
     const [Mymensingh, setMymensingh] = useState(false);
-
-    
- const {setFilter,activeCatagory,setActivecatagory,items}=useContext(COUNTER_CONTEXT)
- 
- useEffect(()=>{
- 
-     const filterCatagory = items.filter(item=>  activeCatagory === "All" ? item: item.category === activeCatagory);
-     setFilter(filterCatagory)
- 
- },[setFilter,activeCatagory,setActivecatagory,items])
-  
-  const dhakaDivision= [
-     {"id":0,
-     "name":"All"
-     
-     },
-     {"id":1,
-     "name":"Dhaka"
-     },
-     {"id":2,
-     "name":"Gazipur",
-     },
-     {"id":3,
-     "name":"Kishoreganj",
-     },
-     {"id":4,
-     "name":"Manikganj",
-     },
-     {"id":5,
-     "name":"Munshiganj",
-     },
-     {"id":6,
-     "name":"Narayanganj",
-     },
-     {"id":7,
-     "name":"Narsingdi",
-     },
-     {"id":8,
-     "name":"Tangail",
-     },
-     {"id":9,
-     "name":"Faridpur",
-     },
-     {"id":10,
-     "name":"Gopalganj",
-     },
-     {"id":11,
-     "name":"Madaripur",
-     },
-     {"id":12,
-     "name":"Rajbari",
-     },
-     {"id":13,
-     "name":"Shariatpur",
-     }, ]
  
     return (
         <div>
@@ -92,29 +43,7 @@ const Filter = () => {
                             </div>
                             <div className={`${dhaka ? "menu" : "c4c4c4c4c4c4c4c"}`}>
                                 <ul>
-
-                                   {
-                                        dhakaDivision.map(dhaka=> <li
-                                        style={{cursor:"pointer",width:120}}
-                                            onClick={()=> setActivecatagory(dhaka.name)}
-                                            setActivecatagory={ setActivecatagory}
-                                            active={activeCatagory}
-                                            className={`${ activeCatagory === dhaka.name && ' bg-success rounded ps-2'}`}
-                                            >{dhaka.name}</li>)
-                                    }
-                                   
-                                    {/* <li><Link to="/Gazipur">Gazipur</Link></li>
-                                    <li><Link to="/">Kishoreganj</Link></li>
-                                    <li><Link to="/">Manikganj</Link></li>
-                                    <li><Link to="/">Munshiganj</Link></li>
-                                    <li><Link to="/">Narayanganj</Link></li>
-                                    <li><Link to="/">Narsingdi</Link></li>
-                                    <li><Link to="/">Tangail</Link></li>
-                                    <li><Link to="/">Faridpur</Link></li>
-                                    <li><Link to="/">Gopalganj</Link></li>
-                                    <li><Link to="/">Madaripur</Link></li>
-                                    <li><Link to="/">Rajbari</Link></li>
-                                    <li><Link to="/">Shariatpur</Link></li> */}
+                                    <DhakaDivision></DhakaDivision>
                                 </ul>
                             </div>
                         </div>
@@ -137,14 +66,7 @@ const Filter = () => {
                             </div>
                             <div className={`${rajshahi ? "menu" : "c4c4c4c4c4c4c4c"}`}>
                                 <ul>
-                                    <li><Link to="/">Rajshahi</Link></li>
-                                    <li><Link to="/">Natore</Link></li>
-                                    <li><Link to="/">Sirajganj</Link></li>
-                                    <li><Link to="/">Pabna</Link></li>
-                                    <li><Link to="/">Bogura</Link></li>
-                                    <li><Link to="/">Chapainawabganj</Link></li>
-                                    <li><Link to="/">Naogaon</Link></li>
-                                    <li><Link to="/">Joypurhat</Link></li>
+                                    <RajshahiDivision></RajshahiDivision>
                                 </ul>
                             </div>
                         </div>
@@ -167,14 +89,7 @@ const Filter = () => {
                             </div>
                             <div className={`${Rangpur ? "menu" : "c4c4c4c4c4c4c4c"}`}>
                                 <ul>
-                                    <li><Link to="/">Rangpur</Link></li>
-                                    <li><Link to="/">Dinajpur</Link></li>
-                                    <li><Link to="/">Kurigram</Link></li>
-                                    <li><Link to="/">Gaibandha</Link></li>
-                                    <li><Link to="/">Lalmonirhat</Link></li>
-                                    <li><Link to="/">Nilphamari</Link></li>
-                                    <li><Link to="/">Panchagarh</Link></li>
-                                    <li><Link to="/">Thakurgaon</Link></li>
+                                    <RangpurDivision></RangpurDivision>
                                 </ul>
                             </div>
                         </div>
@@ -198,16 +113,7 @@ const Filter = () => {
                             </div>
                             <div className={`${Khulna ? "menu" : "c4c4c4c4c4c4c4c"}`}>
                                 <ul>
-                                    <li><Link to="/">Khulna</Link></li>
-                                    <li><Link to="/">Bagerhat</Link></li>
-                                    <li><Link to="/">Chuadanga</Link></li>
-                                    <li><Link to="/">Jashore</Link></li>
-                                    <li><Link to="/">Jhenaidah</Link></li>
-                                    <li><Link to="/">Kushtia</Link></li>
-                                    <li><Link to="/">Magura</Link></li>
-                                    <li><Link to="/">Meherpur</Link></li>
-                                    <li><Link to="/">Narail</Link></li>
-                                    <li><Link to="/">Satkhira</Link></li>
+                                    <KhulnaDivision></KhulnaDivision>
                                 </ul>
                             </div>
                         </div>
@@ -231,13 +137,7 @@ const Filter = () => {
                             </div>
                             <div className={`${Barisal ? "menu" : "c4c4c4c4c4c4c4c"}`}>
                                 <ul>
-                                    <li><Link to="/">Barisal</Link></li>
-                                    <li><Link to="/">Barguna</Link></li>
-                                    <li><Link to="/">Bhola</Link></li>
-                                    <li><Link to="/">Jhalokati</Link></li>
-                                    <li><Link to="/">Patuakhali</Link></li>
-                                    <li><Link to="/">Pirojpur</Link></li>
-
+                                   <BarisalDivision></BarisalDivision>  
                                 </ul>
                             </div>
                         </div>
@@ -262,18 +162,7 @@ const Filter = () => {
                             </div>
                             <div className={`${Chittagong ? "menu" : "c4c4c4c4c4c4c4c"}`}>
                                 <ul>
-                                    <li><Link to="/">Chittagong</Link></li>
-                                    <li><Link to="/">Brahmanbaria</Link></li>
-                                    <li><Link to="/">Comilla</Link></li>
-                                    <li><Link to="/">Chandpur</Link></li>
-                                    <li><Link to="/">Lakshmipur</Link></li>
-                                    <li><Link to="/">Noakhali</Link></li>
-                                    <li><Link to="/">Feni</Link></li>
-                                    <li><Link to="/">Khagrachhari</Link></li>
-                                    <li><Link to="/">Rangamati</Link></li>
-                                    <li><Link to="/">Bandarban</Link></li>
-                                    <li><Link to="/">Cox's Bazar</Link></li>
-
+                                     <ChittagongDivison></ChittagongDivison>
                                 </ul>
                             </div>
                         </div>
@@ -296,11 +185,7 @@ const Filter = () => {
                             </div>
                             <div className={`${Sylhet ? "menu" : "c4c4c4c4c4c4c4c"}`}>
                                 <ul>
-                                    <li><Link to="/">Sylhet</Link></li>
-                                    <li><Link to="/">Habiganj</Link></li>
-                                    <li><Link to="/">Moulvibazar</Link></li>
-                                    <li><Link to="/">Sunamganj</Link></li>
-
+                                     <SylhetDivision></SylhetDivision>
                                 </ul>
                             </div>
                         </div>
@@ -325,11 +210,7 @@ const Filter = () => {
                             </div>
                             <div className={`${Mymensingh ? "menu" : "c4c4c4c4c4c4c4c"}`}>
                                 <ul>
-                                    <li><Link to="/">Mymensingh</Link></li>
-                                    <li><Link to="/">Jamalpur</Link></li>
-                                    <li><Link to="/">Netrokona</Link></li>
-                                    <li><Link to="/">Sherpur</Link></li>
-
+                                  <MymensingDivision></MymensingDivision>
                                 </ul>
                             </div>
                         </div>

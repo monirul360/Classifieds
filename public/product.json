@@ -2,6 +2,7 @@
     {
       "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
       "category": "Dhaka",
+      "type":"Hostel",
       "name": "ULTRABOOST 22 SHOES",
       "seller": "Addidas",
       "price": 420,
@@ -15,6 +16,7 @@
     {
       "id": "13cbc7ed-a61b-4883-9d42-82d7d8642b86",
       "category": "Dhaka",
+      "type":"Hostel",
       "name": "LUNAR NEW YEAR ULTRABOOST DNA SHOES",
       "seller": "Addidas",
       "price": 196,
@@ -28,6 +30,7 @@
     {
       "id": "307f166f-1d04-4573-bc37-2f461ea9d4f7",
       "category": "Gazipur",
+      "type":"Hostel",
       "name": "SUPERNOVA SHOES",
       "seller": "Addidas",
       "price": 245,
@@ -41,6 +44,7 @@
     {
       "id": "4bf9798f-63bc-4a83-b0c6-6a3b816fe922",
       "category": "Gazipur",
+      "type":"Mass",
       "name": "LITE RACER ADAPT 3.0 SHOES",
       "seller": "Addidas",
       "price": 229,
@@ -54,6 +58,7 @@
     {
       "id": "9496d72b-04ec-41f8-9bc3-0a7c9697be8e",
       "category": "Kishoreganj",
+      "type":"Mass",
       "name": "4DFWD SHOES",
       "seller": "Addidas",
       "price": 287,
@@ -67,6 +72,7 @@
     {
       "id": "6e5593d3-557b-43cf-8dab-a5140faedfb0",
       "category": "Kishoreganj",
+      "type":"Mass",
       "name": "KAPTIR 2.0 SHOES",
       "seller": "Addidas",
       "price": 138,
@@ -106,6 +112,7 @@
     {
       "id": "1564a06b-692f-4f2e-8413-9c8a1cc2da77",
       "category": "Munshiganj",
+      "type":"House",
       "name": "NMD_R1 V2 SHOES",
       "seller": "Addidas",
       "price": 260,
@@ -119,6 +126,7 @@
     {
       "id": "ac44095f-230e-4502-8816-dea3eaae8320",
       "category": "Munshiganj",
+      "type":"House",
       "name": "NMD_R1 PRIMEBLUE SHOES",
       "seller": "Addidas",
       "price": 437,
@@ -132,6 +140,7 @@
     {
       "id": "d0803f97-966f-4296-ad31-a7f70fc86fab",
       "category": "Narayanganj",
+      "type":"House",
       "name": "TIRO TRACK PANTS",
       "seller": "Addidas",
       "price": 146,
@@ -171,6 +180,7 @@
     {
       "id": "e4220958-06d2-4d50-96fa-0163a563f43d",
       "category": "Narsingdi",
+      "type":"Office",
       "name": "TIRO 21 TRACK PANTS",
       "seller": "Addidas",
       "price": 148,
@@ -184,6 +194,7 @@
     {
       "id": "ae69f0e4-559c-4b24-8032-80b63f9b5073",
       "category": "Tangail",
+      "type":"Office",
       "name": "TIRO TRACK PANTS RED",
       "seller": "Addidas",
       "price": 122,
@@ -197,6 +208,7 @@
     {
       "id": "dbf7ab3f-b383-4d95-8ab7-f55fcf6fa5f2",
       "category": "Tangail",
+      "type":"Office",
       "name": "TIRO PANTS BLACK GOLD",
       "seller": "Addidas",
       "price": 115,
@@ -327,6 +339,19 @@
     {
       "id": "b4d83415-d20a-4bba-8629-22b2780b6e93",
       "category": "Shariatpur",
+      "name": "TERREX FREE HIKER COLD.RDY HIKING BOOTS",
+      "seller": "Addidas",
+      "price": 169,
+      "stock": 17,
+      "ratings": 5,
+      "ratingsCount": 2833,
+      "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/2ded0bee28b249bbb19cad5000818b77_9366/Terrex_Free_Hiker_COLD.RDY_Hiking_Boots_Black_FZ3364_01_standard.jpg",
+      "shipping": 10,
+      "amount": 1
+    },
+    {
+      "id": "b4d83415-d20a-4bba-8629-22b2780b6e93",
+      "category": "Rajshahi",
       "name": "TERREX FREE HIKER COLD.RDY HIKING BOOTS",
       "seller": "Addidas",
       "price": 169,

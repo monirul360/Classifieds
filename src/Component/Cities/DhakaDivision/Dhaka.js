@@ -1,25 +1,62 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { COUNTER_CONTEXT } from '../../../App';
+import { MdOutlineGridView } from "react-icons/md";
+import MenuCatagory from '../../All of Bangladesh/MenuCatagory/MenuCatagory';
 
 const Dhaka = () => {
-    // const post = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-    const {filter}= useContext(COUNTER_CONTEXT);
+    
+    const [serch,setSerch]=useState('')
+
+    const {filter}=useContext(COUNTER_CONTEXT)
+ 
+   
     return (
         <div className='city-filter'>
             <div className="tittle">
                 <h3>Dhaka Division , <span>Dhaka</span></h3>
                 <p>Found results <span>50+</span></p>
             </div>
-            <div className="filter-catagory">
-                <Link to='/'>House</Link>
-                <Link to='/'>Mass</Link>
-                <Link to='/'>Hostel</Link>
-                <Link to='/'>Office</Link>
+
+              <div className="d-flex align-items-center d-lg-none mt-3 mb-2 justify-content-center">
+                    <div  role="search">
+                        <input className='form-control me-2' type="text"placeholder="Search" aria-label="Search" />
+                        {/* <button className='btn btn-outline-success'>Search</button> */}
+                    </div>
+                </div>
+         
+            <div className='d-flex justify-content-between'>
+                    <div className='d-flex align-items-center'>
+                     <Link to={'Grid'}> <MdOutlineGridView className='display-4'></MdOutlineGridView></Link>
+                    </div>
+                    
+                <div className='filter-catagory'>
+                    <MenuCatagory></MenuCatagory>
+                </div> 
+                 
+
+                  <div className='d-flex  d-none d-lg-block align-items-center '>
+                     <form  className='d-flex' role="search">
+                        <input onChange={(e)=>setSerch(e.target.value)} className='form-control me-2' type="text"placeholder="Search" aria-label="Search" />
+                        {/* <button className='btn btn-outline-success'>Search</button> */}
+                     </form>
+                  </div>
             </div>
+
+         
+           
             {/* content section */}
-            {
-                filter.map(item => 
+
+              {
+                filter.filter((val)=>{
+                    if(serch == "")
+                    return val;
+
+                    else if(val.category.toLowerCase().includes(serch.toLowerCase())){
+                        return val;
+                     }
+
+                }).map(item => 
 
                     <div className="col-md-12 col-lg-12 gridlist">
                         <div style={{ border: "1px solid #c6c6c6" }} className='my-4  p-3'>
@@ -29,6 +66,7 @@ const Dhaka = () => {
                                 </div>
                                 <div className="info">
                                     <h3>Name:{item.category}</h3>
+                                    <h3>{item.type}</h3>
                                     {/* <h3>ASTRA @ 8 Kia Peng SuitesOpens in new window </h3> */}
                                     <div className="location d-flex align-items-center my-2">
                                         <div className="icon">

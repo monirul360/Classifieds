@@ -346,8 +346,18 @@ select {
   margin-right: 5px;
   font-size: 14px;
 }
+.location i {
+  color: #7AA93C;
+  margin-right: 5px;
+  font-size: 14px;
+}
 
 .gridlist .info .location p {
+  color: #7AA93C;
+  font-size: 14px;
+  font-weight: 500;
+}
+ .location p {
   color: #7AA93C;
   font-size: 14px;
   font-weight: 500;
@@ -359,14 +369,36 @@ select {
   font-weight: 500;
   margin-left: 18px;
 }
+ .status {
+  color: #7AA93C;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 18px;
+}
 
 .gridlist .info .description {
   font-size: 13px;
   color: #000;
   margin: 10px 0px;
 }
+ .info {
+  font-size: 13px;
+  color: #000;
+  margin: 10px 0px;
+}
+
+ .description {
+  font-size: 13px;
+  color: #000;
+  margin: 10px 0px;
+}
 
 .gridlist .info .price {
+  font-size: 18px;
+  color: #9801c0;
+  margin: 7px 0;
+}
+ .price {
   font-size: 18px;
   color: #9801c0;
   margin: 7px 0;
@@ -423,6 +455,36 @@ select {
   padding: 7px;
   margin-right: 7px;
 }
+
+
+
+/*  menu catagory start && grid layout */
+.menu-catagory{
+  width: fit-content;
+  background-color: #ddd;
+  padding: 10px 5px;
+  margin: 15px 0px;
+  border-left: 1px solid #c6c6c6;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.menu-catagory a{
+  background-color: #9801c0;
+  color: #F0F2F5;
+  padding: 7px;
+  margin-right: 7px;
+}
+
+.info h3 {
+  font-size: 18px;
+  color: #9801c0;
+  margin: 7px 0;
+
+}
+
+/*  menu catagory  end*/
+
+
 
 .howitwrap {
   padding: 40px 0px;
@@ -1423,12 +1485,18 @@ select {
   }
 }
 
+/* Grid layout system */
+
+@media (min-width: 1400px) { 
+  #grid_container{
+    width: 1100px;
+  }
+ }
 
 @media (max-width:1000px) {
   .slider .row select {
     border: none;
   }
-
   .slider h1 {
     text-align: center;
     font-size: 40px;
@@ -1648,3 +1716,5 @@ select {
     margin-bottom: 30px;
   }
 }
+
+
