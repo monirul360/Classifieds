@@ -24,13 +24,6 @@ const LatestAds = () => {
                         </div>
 
                     </div>
-
-                    <div className="viewallbtn mb-5">
-                        <Link to="/">View All Latest Ads</Link>
-                    </div>
-                    <div className="wideBanner">
-                        <img classNameName='img-fluid' src={LatestAd} alt="" />
-                    </div>
                 </div>
             </div>
             {/* latest ads post end */}

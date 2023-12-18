@@ -3,9 +3,11 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import auth from '../../Firebase';
+import { useNavigate } from 'react-router-dom';
 
 const UpdateProfile = () => {
     const [user, lodding] = useAuthState(auth);
+    const navigate = useNavigate();
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         const updatedInformation = {
@@ -30,6 +32,7 @@ const UpdateProfile = () => {
                 if (check) {
                     toast("Update profile successful");
                     reset();
+                    navigate('/dashboard/about_user')
                 } else {
                     toast("Update profile fail");
                 }

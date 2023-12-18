@@ -7,49 +7,49 @@ const Showpost = () => {
     const [user, loading] = useAuthState(auth);
 
 
-    // const { refetch, isLoading, error, data } = useQuery({
-    //     queryKey: ['repoData'],
-    //     queryFn: () =>
-    //         fetch(`http://localhost:5000/userfreeads?email=${user.email}`).then(
-    //             (res) => res.json(),
-    //         ),
-    // })
-    // if (isLoading) return <p>Loading</p>
-
-    const [data, setState] = useState([])
-    const [timer, setTimer] = useState(null)
-    const [isMounted, setIsMounted] = useState(false)
-
-    async function updateDevicePosition() {
-        try {
-            const result = await fetch(`http://localhost:5000/userfreeads?email=${user.email}`, {
-                method: 'GET',
-                headers: {
-                    authorization: `${localStorage.getItem('accesToken')}`
-                }
-            })
-            const data = await result.json()
-            setState(data)
-        } catch (e) {
-            console.error(e)
-        }
-        clearTimeout(timer)
-        setTimer(setTimeout(updateDevicePosition, 200))
-    }
-
-    useEffect(() => {
-        if (!isMounted) {
-            updateDevicePosition()
-            setIsMounted(true)
-        }
+    const { refetch, isLoading, error, data } = useQuery({
+        queryKey: ['repoData'],
+        queryFn: () =>
+            fetch(`http://localhost:5000/userfreeads?email=${user.email}`).then(
+                (res) => res.json(),
+            ),
     })
+    if (isLoading) return <p>Loading</p>
+
+    // const [data, setState] = useState([])
+    // const [timer, setTimer] = useState(null)
+    // const [isMounted, setIsMounted] = useState(false)
+
+    // async function updateDevicePosition() {
+    //     try {
+    //         const result = await fetch(`http://localhost:5000/userfreeads?email=${user.email}`, {
+    //             method: 'GET',
+    //             headers: {
+    //                 authorization: `${localStorage.getItem('accesToken')}`
+    //             }
+    //         })
+    //         const data = await result.json()
+    //         setState(data)
+    //     } catch (e) {
+    //         console.error(e)
+    //     }
+    //     clearTimeout(timer)
+    //     setTimer(setTimeout(updateDevicePosition, 1000))
+    // }
+
+    // useEffect(() => {
+    //     if (!isMounted) {
+    //         updateDevicePosition()
+    //         setIsMounted(true)
+    //     }
+    // })
 
     return (
         <div>
             <div className="row my-4">
                 {
                     data.map(show =>
-                        <div className="col-md-6">
+                        <div className="col-md-6" key={show._id} refetch={refetch}>
                             <div class="card my-3">
                                 <div class="card-body">
                                     <div className="d-flex align-items-center">

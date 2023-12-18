@@ -3,6 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase';
 import { toast } from 'react-toastify';
 import { useForm } from 'react-hook-form';
+import { useQuery } from '@tanstack/react-query';
 const Review = () => {
     const [user] = useAuthState(auth);
     const name = user.displayName;
@@ -63,29 +64,37 @@ const Review = () => {
     //         .then(data => setReviewper(data));
     // }, [user])
 
-
-    const [reviewper, setState] = useState([])
-    const [timer, setTimer] = useState(null)
-    const [isMounted, setIsMounted] = useState(false)
-
-    async function updateDevicePosition() {
-        try {
-            const result = await fetch(`http://localhost:5000/review?email=${user.email}`)
-            const data = await result.json()
-            setState(data)
-        } catch (e) {
-            console.error(e)
-        }
-        clearTimeout(timer)
-        setTimer(setTimeout(updateDevicePosition, 200))
-    }
-
-    useEffect(() => {
-        if (!isMounted) {
-            updateDevicePosition()
-            setIsMounted(true)
-        }
+    const { refetch, isLoading, error, data } = useQuery({
+        queryKey: ['repoData'],
+        queryFn: () =>
+            fetch(`http://localhost:5000/reviewuser?email=${user.email}`).then(
+                (res) => res.json(),
+            ),
     })
+    if (isLoading) return <p>Loading</p>
+
+    // const [reviewper, setState] = useState([])
+    // const [timer, setTimer] = useState(null)
+    // const [isMounted, setIsMounted] = useState(false)
+
+    // async function updateDevicePosition() {
+    //     try {
+    //         const result = await fetch(`http://localhost:5000/reviewuser?email=${user.email}`)
+    //         const data = await result.json()
+    //         setState(data)
+    //     } catch (e) {
+    //         console.error(e)
+    //     }
+    //     clearTimeout(timer)
+    //     setTimer(setTimeout(updateDevicePosition, 200))
+    // }
+
+    // useEffect(() => {
+    //     if (!isMounted) {
+    //         updateDevicePosition()
+    //         setIsMounted(true)
+    //     }
+    // })
 
 
     return (
@@ -99,9 +108,9 @@ const Review = () => {
 
 
                 {
-                    reviewper.map(reviewper =>
+                    data.map(reviewper =>
 
-                        <div className="mo3100100">
+                        <div className="mo3100100" key={reviewper._id} refetch={refetch}>
                             <div class="mo3100110">
                                 <img src={reviewper?.image} alt="" />
                                 <h2 className='clientname'>{reviewper?.name}</h2>

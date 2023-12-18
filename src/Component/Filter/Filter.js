@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, { useState } from 'react';
 import DhakaDivision from '../All of Bangladesh/DhakaDev/DhakaDivision/DhakaDivision';
 import RajshahiDivision from '../All of Bangladesh/RajshahiDivision/RajshahiDivision';
 import RangpurDivision from '../All of Bangladesh/RangpurDivision/RangpurDivision';
@@ -17,13 +17,13 @@ const Filter = () => {
     const [Chittagong, setChittagong] = useState(false);
     const [Sylhet, setSylhet] = useState(false);
     const [Mymensingh, setMymensingh] = useState(false);
- 
+
     return (
         <div>
             <div className="row filter-item my-4 py-3">
                 <div className="col-md-12">
                     <div>
-                        <p className='lead bg-info p-3'>
+                        <p className='lead bg-info text-white p-3'>
                             All of Bangladesh
                         </p>
                         {/* dhaka-divi start */}
@@ -137,7 +137,7 @@ const Filter = () => {
                             </div>
                             <div className={`${Barisal ? "menu" : "c4c4c4c4c4c4c4c"}`}>
                                 <ul>
-                                   <BarisalDivision></BarisalDivision>  
+                                    <BarisalDivision></BarisalDivision>
                                 </ul>
                             </div>
                         </div>
@@ -162,7 +162,7 @@ const Filter = () => {
                             </div>
                             <div className={`${Chittagong ? "menu" : "c4c4c4c4c4c4c4c"}`}>
                                 <ul>
-                                     <ChittagongDivison></ChittagongDivison>
+                                    <ChittagongDivison></ChittagongDivison>
                                 </ul>
                             </div>
                         </div>
@@ -185,7 +185,7 @@ const Filter = () => {
                             </div>
                             <div className={`${Sylhet ? "menu" : "c4c4c4c4c4c4c4c"}`}>
                                 <ul>
-                                     <SylhetDivision></SylhetDivision>
+                                    <SylhetDivision></SylhetDivision>
                                 </ul>
                             </div>
                         </div>
@@ -210,7 +210,7 @@ const Filter = () => {
                             </div>
                             <div className={`${Mymensingh ? "menu" : "c4c4c4c4c4c4c4c"}`}>
                                 <ul>
-                                  <MymensingDivision></MymensingDivision>
+                                    <MymensingDivision></MymensingDivision>
                                 </ul>
                             </div>
                         </div>

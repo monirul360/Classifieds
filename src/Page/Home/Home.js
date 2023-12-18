@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Catagory from '../../Component/Catagory/Catagory';
 import img1 from './../../Img/02.jpg';
 import img2 from './../../Img/03.jpg';
@@ -11,6 +11,13 @@ import monirul from './../../Img/monirul.png'
 import LatestAds from '../../Component/LatestAds/LatestAds';
 import Cities from '../../Component/Cities/Cities';
 const Home = () => {
+    const [review, setreview] = useState([]);
+    useEffect(() => {
+        fetch("http://localhost:5000/review")
+            .then(res => res.json())
+            .then(data => setreview(data));
+    }, [])
+
     return (
         <div>
             <div className="slider">
@@ -79,22 +86,22 @@ const Home = () => {
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
                                 <img src={monirul} alt="" />
-                                <h2 className='clientname'>Md Monirul Islam(Student)</h2>
+                                <h2 className='clientname'>Md Monirul Islam</h2>
                                 <p className='clientinfo'>Bogura ,Dhaka, Bangladesh</p>
                                 <p className='clientdescription'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, debitis. Ea tempora amet delectus nihil, cum doloribus architecto neque ut.</p>
                             </div>
-                            <div class="carousel-item" data-bs-interval="2000">
-                                <img src={monirul} alt="" />
-                                <h2 className='clientname'>Md Monirul Islam(Student)</h2>
-                                <p className='clientinfo'>Bogura ,Dhaka, Bangladesh</p>
-                                <p className='clientdescription'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, debitis. Ea tempora amet delectus nihil, cum doloribus architecto neque ut.</p>
-                            </div>
-                            <div class="carousel-item">
-                                <img src={monirul} alt="" />
-                                <h2 className='clientname'>Md Monirul Islam(Student)</h2>
-                                <p className='clientinfo'>Bogura ,Dhaka, Bangladesh</p>
-                                <p className='clientdescription'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, debitis. Ea tempora amet delectus nihil, cum doloribus architecto neque ut.</p>
-                            </div>
+
+                            {
+                                review.map(r =>
+                                    <div class="carousel-item" data-bs-interval="2000">
+                                        <img src={r?.image} alt="" />
+                                        <h2 className='clientname'>{r?.name}</h2>
+                                        <p className='clientinfo'>{r?.address}</p>
+                                        <p className='clientdescription'>{r?.description}</p>
+                                    </div>
+
+                                )
+                            }
                         </div>
                     </div>
                 </div>
