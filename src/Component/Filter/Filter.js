@@ -20,10 +20,10 @@ const Filter = () => {
 
     return (
         <div>
-            <div className="row filter-item my-4 py-3">
+            <div className="row filter-item">
                 <div className="col-md-12">
                     <div>
-                        <p className='lead bg-info text-white p-3'>
+                        <p className='lead bg-primary text-white rounded py-2 text-center'>
                             All of Bangladesh
                         </p>
                         {/* dhaka-divi start */}

@@ -6,7 +6,8 @@ const RajshahiDivision = () => {
 
     useEffect(() => {
 
-        const filterCatagory = items.filter(item => activeCatagory === "All" ? item : item.district === activeCatagory);
+        const filterCatagory = items.filter(item => activeCatagory === "All" ? item : item.category === activeCatagory);
+
         setFilter(filterCatagory)
 
     }, [setFilter, activeCatagory, setActivecatagory, items])
@@ -50,11 +51,11 @@ const RajshahiDivision = () => {
         <div>
             {
                 RajshahiDivision.map(rajshahi => <li
-                    style={{ cursor: "pointer", width: 120 }}
+                    style={{ cursor: "pointer", "width": "100%" }}
                     onClick={() => setActivecatagory(rajshahi.name)}
-                    setActivecatagory={setActivecatagory}
-                    active={activeCatagory}
-                    className={`${activeCatagory === rajshahi.name && ' bg-success rounded ps-2'}`}
+                    // setActivecatagory={setActivecatagory}
+                    // active={activeCatagory}
+                    className={`${activeCatagory === rajshahi.name && 'bg-primary text-white rounded ps-3 py-1'}`}
                 >{rajshahi.name}</li>)
             }
         </div>

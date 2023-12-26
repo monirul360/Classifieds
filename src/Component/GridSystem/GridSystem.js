@@ -9,15 +9,7 @@ const GridSystem = () => {
     const [serch, setSerch] = useState('')
     return (
         <div id='grid_container' className='ms-2'>
-
-            <div className='d-flex  d-lg-none justify-content-center'>
-                <form className='d-flex' role="search">
-                    <input onChange={(e) => setSerch(e.target.value)} className='form-control me-2' type="text" placeholder="Search" aria-label="Search" />
-                    {/* <button className='btn btn-outline-success'>Search</button> */}
-                </form>
-            </div>
-
-            <div className='d-flex justify-content-between align-items-center'>
+            <div div className='d-flex justify-content-between align-items-center' >
                 <div>
                     <Link to={'/'}>
                         <AiOutlineArrowLeft className='display-4 cursor: pointer'></AiOutlineArrowLeft>
@@ -27,16 +19,20 @@ const GridSystem = () => {
                 <div className='menu-catagory'>
                     <MenuCatagory></MenuCatagory>
                 </div>
-
-                <div className='d-flex align-items-center d-none d-lg-block'>
-                    <form className='d-flex' role="search">
-                        <input onChange={(e) => setSerch(e.target.value)} className='form-control me-2' type="text" placeholder="Search" aria-label="Search" />
-                        {/* <button className='btn btn-outline-success'>Search</button> */}
-                    </form>
-                </div>
             </div>
+            <div className='row'>
+                {
+                    filter.map(r =>
 
-            <div className='row  '>
+                        <div>
+                            <img src={r?.image} alt="" />
+                            <p>{r.name}</p>
+                        </div>
+
+                    )
+                }
+            </div>
+            {/* <div className='row  '>
                 {
                     filter.filter((val) => {
                         if (serch == "")
@@ -73,8 +69,8 @@ const GridSystem = () => {
                         </div>
                     </>)
                 }
-            </div>
-        </div>
+            </div> */}
+        </div >
     );
 };
 

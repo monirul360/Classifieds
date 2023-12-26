@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import Showpost from './Showpost';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -11,6 +11,14 @@ const Post = () => {
     const [moni30000, setmoni30000] = useState('');
     const name = user?.displayName;
     const email = user?.email;
+    const userphoto = user?.photoURL;
+    const [info, setinfo] = useState([]);
+    useEffect(() => {
+        fetch(`http://localhost:5000/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setinfo(data));
+    }, [user])
+    const { bio } = info;
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
     const imageStorageKey = '9903ff48ea7130ca4de8dc43c159c096';
     const onSubmit = async (data) => {
@@ -31,9 +39,9 @@ const Post = () => {
                         Title: data.Title,
                         Description: data.Description,
                         division: data.division,
-                        district: data.district,
+                        category: data.district,
                         postcode: data.postcode,
-                        category: data.category,
+                        roomtype: data.category,
                         price: data.price,
                         per: data.per,
                         wifi: data.wifi,
@@ -46,6 +54,8 @@ const Post = () => {
                         number: data.number,
                         email: email,
                         image: img,
+                        userphoto: userphoto,
+                        bio: bio,
                     }
                     // send to your database 
                     fetch('http://localhost:5000/freeads', {

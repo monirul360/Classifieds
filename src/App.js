@@ -44,7 +44,6 @@ function App() {
       .then(res => res.json())
       .then(data => setip(data));
   }, [])
-  console.log(ip);
 
   const [items, setItems] = useState([]);
   const [filter, setFilter] = useState([])
@@ -64,7 +63,6 @@ function App() {
     }
     fechProducts();
   }, []);
-
   return (
     <>
       <COUNTER_CONTEXT.Provider value={value}>

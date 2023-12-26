@@ -20,7 +20,7 @@ const Home = () => {
 
     return (
         <div>
-            <div className="slider">
+            {/* <div className="slider">
                 <div className="container">
                     <h1>World's Largest Classifieds Site
                     </h1>
@@ -42,40 +42,12 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* <Catagory></Catagory> */}
             <LatestAds></LatestAds>
-            <div class="section  howitwrap">
-                <div class="container">
-                    <ul class="howlist row">
-                        {/* step 1 */}
-                        <li class="col-md-4 col-sm-4">
-                            <div class="iconcircle"><i class="fa fa-user" aria-hidden="true"></i></div>
-                            <h4>Create a Free Account</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et dolore magna aliqua.</p>
-                        </li>
-                        {/* step 1 end */}
 
-                        {/* step 2 */}
-                        <li class="col-md-4 col-sm-4">
-                            <div class="iconcircle"><i class="fa fa-black-tie" aria-hidden="true"></i></div>
-                            <h4>Post your Free Ad</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et dolore magna aliqua.</p>
-                        </li>
-                        {/* step 2 end */}
-
-                        {/* step 3 */}
-                        <li class="col-md-4 col-sm-4">
-                            <div class="iconcircle"><i class="fa fa-file-text" aria-hidden="true"></i></div>
-                            <h4>Sold or Buy</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et dolore magna aliqua.</p>
-                        </li>
-                        {/* step 3 end */}
-                    </ul>
-                </div>
-            </div>
             {/* testimonial */}
-            <section className='testimonial'>
+            {/* <section className='testimonial'>
                 <div className="container">
                     <div class="titleTop">
                         <h1>Happy <span>Customers</span></h1>
@@ -117,7 +89,7 @@ const Home = () => {
                         </button>
                     </div>
                 </div>
-            </section>
+            </section> */}
             <div class="appwraper">
                 <div class="container">
 
@@ -137,10 +109,6 @@ const Home = () => {
                 </div>
             </div>
             <Cities></Cities>
-            <div class="wideBanner">
-                <img src={latestads} alt="" />
-
-            </div>
 
         </div>
     );

@@ -49,7 +49,7 @@ const Showpost = () => {
             <div className="row my-4">
                 {
                     data.map(show =>
-                        <div className="col-md-6" key={show._id} refetch={refetch}>
+                        <div className="col-md-6" key={show._id} refetch>
                             <div class="card my-3">
                                 <div class="card-body">
                                     <div className="d-flex align-items-center">

@@ -6,7 +6,6 @@ import userimg from './../../../Icon/user.png'
 import { signOut } from 'firebase/auth';
 const Nav = () => {
     const [user, loading, error] = useAuthState(auth);
-    const [shownav, setShownav] = useState(false);
     const singout = () => {
         signOut(auth);
         localStorage.removeItem("accestoken")
@@ -14,7 +13,7 @@ const Nav = () => {
 
     return (
         <div>
-            <div className="top-bar">
+            {/* <div className="top-bar">
                 <div className="container">
                     <div className="d-flex">
                         <div className="top-social">
@@ -49,74 +48,94 @@ const Nav = () => {
 
                     </div>
                 </div>
-            </div>
+            </div> */}
             <nav>
                 <div className="container">
                     <div className="flex">
                         <div className="logo">
                             <h2><Link to="/">World's</Link></h2>
                         </div>
-                        <div className="menu">
-                            <ul>
-                                <li><Link id='home' to="/">HOME</Link></li>
-                                <li><Link to="/aboutus">ABOUT US</Link></li>
-                                <li><Link to="/pages">PAGES</Link></li>
-                                <li><Link to="/bloge">BLOG</Link></li>
-                                <li><Link to="/contact">CONTACT</Link></li>
-                                {user ? <>
+                        <div className='d-flex justify-content-center align-items-center'>
+                            <div className="menu">
+                                <ul>
+                                    <li><Link to="/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+                                    </svg></Link></li>
+                                    <li>
+                                        <Link to="/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-btn-fill" viewBox="0 0 16 16">
+                                            <path d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2m6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
+                                        </svg></Link>
+                                    </li>
+                                    <li>
+                                        <div class="p-1 ms-3 position-relative">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                                            </svg>
+                                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                                2+
+                                                <span class="visually-hidden">unread messages</span>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <Link to="/aboutus">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                                            </svg>
+                                        </Link>
+                                    </li>
 
-                                    <div className='nav-profile'>
-                                        <img
-                                            onClick={() => setShownav(!shownav)} src={userimg} alt="" />
-                                    </div>
-
-                                </>
-                                    : <>
-                                        <li><Link id='register' to="/Register">REGISTER</Link></li>
-                                    </>}
-
-                            </ul>
-                        </div>
-                        <div class="dropdown">
-                            <button type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">HOME</a></li>
-                                <li><a class="dropdown-item" href="#">ABOUT US</a></li>
-                                <li><a class="dropdown-item" href="#">PAGES</a></li>
-                                <li><a class="dropdown-item" href="#">BLOG</a></li>
-                                <li><a class="dropdown-item" href="#">CONTACT</a></li>
-                                <li><a class="dropdown-item" href="#">REGISTER</a></li>
-                            </ul>
-                        </div>
-                        {/* nav-profile-section */}
-                        {user ? <>
-                            <div className={`${shownav ? "nav_profile_section" : "nav_profile_section_hide"}`}>
-                                <div className="d-flex align-items-center border-bottom p-2">
-                                    <div>
-                                        <img src={userimg} alt="" />
-                                    </div>
-                                    <div className='ms-3'>
-                                        <h3>{user?.displayName}</h3>
-                                    </div>
-                                </div>
-                                <div className="nav_profile_nevigate py-3 ps-3">
-                                    <ul>
-                                        <li><Link to='/dashboard'>Videw Profile</Link></li>
-                                        <li><Link to='/dashboard'>Update Information</Link></li>
-                                        <li><Link to='/dashboard'>Add Post</Link></li>
-                                        <li><Link to='/dashboard'>Help & support</Link></li>
-                                        <li><Link to='/dashboard'>Account Issue</Link></li>
-                                        <li><button onClick={() => singout()}>Log Out</button></li>
-                                    </ul>
-                                </div>
+                                </ul>
                             </div>
-                        </> : <></>
-                        }
-                        {/* nav-profile-section  end*/}
+                            <div className='nav_user'>
+                                {
+                                    user ? <>
+                                        <div class="dropdown">
+                                            <button type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                                                <div className="nav_profile_section shadow py-1 px-2">
+                                                    <div className="d-flex align-items-center border-bottom pb-2">
+                                                        <div>
+                                                            <img src={userimg} alt="" />
+                                                        </div>
+                                                        <div className='ms-2'>
+                                                            <h3>{user?.displayName}</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div className="nav_profile_nevigate py-2 ">
+                                                        <ul>
+                                                            <li><Link className="dropdown-item" href="/dashboard/">View profile</Link></li>
+                                                            <li><Link className="dropdown-item" to='/dashboard/updateprofile'>Update Information</Link></li>
+                                                            <li><Link className="dropdown-item" to='/contact'>Help & support</Link></li>
+                                                            <li><Link className="dropdown-item" to='/accountIssue'>Account Issue</Link></li>
+                                                            <li className="dropdown-item"><button className='px-2' onClick={() => singout()}>Log Out</button></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </>
+                                        :
+                                        <>
+                                            <li>
+                                                <Link to="/login">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
+                                                        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                                                    </svg> <span className='fw-bold'>Login</span>
+                                                </Link>
+                                            </li>
+                                        </>
+                                }
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav >
