@@ -34,6 +34,7 @@ import Gazipur from './Component/Cities/DhakaDivision/Gazipur';
 import Review from './Dashboard/Review/Review';
 import User from './Dashboard/User/User';
 import GridSystem from './Component/GridSystem/GridSystem';
+import Search from './Page/Search/Search';
 export const COUNTER_CONTEXT = createContext()
 formatDistance(subDays(new Date(), 3), new Date(), { addSuffix: true })
 function App() {
@@ -72,8 +73,8 @@ function App() {
             <Route index element={<Dhaka></Dhaka>}></Route>
             <Route path='Gazipur' element={<Gazipur></Gazipur>}></Route>
             <Route path='Grid' element={<GridSystem></GridSystem>}></Route>
-
           </Route>
+          <Route path='/search' element={<Search></Search>}></Route>
           <Route path='/aboutus' element={<Aboutus></Aboutus>}></Route>
           <Route path='/register' element={<Register></Register>}></Route>
           <Route path='/login' element={<Login></Login>}></Route>
